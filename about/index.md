@@ -16,7 +16,7 @@ layout: base
 
     <div id="description" style="margin-top:20px">
     	<p>
-    		Hello, I'm a top notch Apple fanchild who loves push code. I am a fulltime hacker who works best late at night (around <a href="#schedule" id="workTime"></a> o'clock). 
+    		Hello, I'm a top notch Apple fanchild who loves push code. I'm a fulltime hacker who works best late at night (around <a href="#schedule" id="workTime"></a> o'clock). 
     	</p>
     	<br>
 
@@ -26,7 +26,7 @@ layout: base
     	<br>
 
     	<p id="friends">
-        	It seems like I am—or should be—friends with<a href="#" class="friendName"></a>.With this in mind, it's worth noting that <span class="friendName"></span> has a more consistent weekly schedule. There is also an obvious connection between me and
+        	It seems like I am—or should be—friends with <a href="#" class="friendName"></a>. With this in mind, it's worth noting that <span class="friendName"></span> has a more consistent weekly schedule. There is also an obvious connection between me and
         </p>
         <br>
 
