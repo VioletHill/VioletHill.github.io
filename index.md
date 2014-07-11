@@ -4,16 +4,16 @@ layout: base
 
 <link rel="stylesheet" href="/css/home.css" type="text/css">
 
-<hr class="videoHide">
+<hr>
 
 <div class="container">
 
     <div class="jumbotron videoHide">
         <h2>DESIGN. CODE. BUILD. INNOVATE</h2>
 
-        <a class="btn btn-large btn-success" href="javascript:watchTheVideo()" style="margin-top:40px">Watch The Film</a>
+        <a class="btn btn-large btn-success" href="javascript:watchTheVideo()" style="margin-top:60px">Watch The Film</a>
 
-        <p class="lead" style="margin-top:40px">
+        <p class="lead" style="margin-top:60px">
             <em style="margin-right:2%">"We are what we repeatedly do. Excellence, then, is not an act, but a habit."</em>
             - Aristotle
         </p>
@@ -27,7 +27,7 @@ layout: base
     </div>
 </div>
     
-<hr class="videoHide">
+<hr>
 
 
 <!--  java script code -->
