@@ -62,7 +62,7 @@ layout: base
         </div>
 
         <p id="languages">
-    		QiuFeng has contributed to repositories in <span id="totalLanug"></span> languages. In particular, QiuFeng seems to be a pretty serious<strong id="firstLanguage"></strong> expert with a surprisingly broad knowledge of <strong id="secondLanguage"></strong> as well. The following chart shows the number of contributions QiuFeng made to repositories mainly written in <span id="languagesTitle"></span>
+    		QiuFeng has contributed to repositories in <span id="totalLanug"></span> languages. In particular, QiuFeng seems to be a pretty serious <strong id="firstLanguage"></strong> expert with a surprisingly broad knowledge of <strong id="secondLanguage"></strong> as well. The following chart shows the number of contributions QiuFeng made to repositories mainly written in <span id="languagesTitle"></span>
         </p>
         <div class="hist-block">
             <div id="languageChart"></div>
@@ -358,27 +358,31 @@ layout: base
 	function setFirstAndSecondLaunage(data)
 	{
 		var first=-1;
+		var firstLanguage="";
 		var firstCount=0;
 		for (var i=0; i<data.length; i++)
 		{
-			if (data.count>firstCount)
+			if (data[i].count>firstCount)
 			{
+				firstCount=data[i].count;
 				first=i;
-				firstCount=data.count;
+				firstLanguage=data[i].language;
 			}
 		}
-		$("#firstLanguage").html(firstCount);
+		$("#firstLanguage").html(firstLanguage);
 
 		var second=-1;
+		var secondLanguage="";
 		var secondCount=0;
 		for (var i=0; i<data.length; i++)
 		{
-			if (data.count>secondCount && i!=firstCount)
+			if (data[i].count>secondCount && i!=first)
 			{
-				second=i;
 				secondCount=data[i].count;
+				second=i;
+				secondLanguage=data[i].language;
 			}
 		}
-		$("#secondLanguage").html(secondCount);
+		$("#secondLanguage").html(secondLanguage);
 	}
 </script>
