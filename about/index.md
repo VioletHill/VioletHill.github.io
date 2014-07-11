@@ -367,7 +367,7 @@ layout: base
 				firstCount=data.count;
 			}
 		}
-		$("firstLanguage").html(firstCount);
+		$("#firstLanguage").html(firstCount);
 
 		var second=-1;
 		var secondCount=0;
@@ -376,7 +376,7 @@ layout: base
 			if (data.count>secondCount && i!=firstCount)
 			{
 				second=i;
-				secondCount=data[i].cout;
+				secondCount=data[i].count;
 			}
 		}
 		$("#secondLanguage").html(secondCount);
