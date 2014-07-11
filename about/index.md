@@ -165,12 +165,12 @@ layout: base
 	{
 		for (var i=1; i<data.length-1; i++)
 		{
-			var res='<a href="https://github.com'+data[i].repo+'">'+data[i].repo+'</a>';
+			var res='<a href="https://github.com/'+data[i].repo+'">'+data[i].repo+'</a>';
 			if (i<data.length-2) res+=', ';
 			else res+=' ';
 			$("#repositories").append(res);
 		}
-		var res='and <a href="https://github.com'+data[data.length-1].repo+'">'+data[data.length-1].repo+'</a>.';
+		var res='and <a href="https://github.com/'+data[data.length-1].repo+'">'+data[data.length-1].repo+'</a>.';
 		$("#repositories").append(res);
 	}
 
