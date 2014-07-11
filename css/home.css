@@ -1,0 +1,12 @@
+.videoClose{
+	width:33px;
+	height:33px;
+	margin-bottom: 10px;
+	background-image:url(/images/videoClose.png);
+}
+
+.videoClose:hover{
+	opacity: 0.5;
+};
+
+
