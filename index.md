@@ -4,8 +4,6 @@ layout: base
 
 <link rel="stylesheet" href="/css/home.css" type="text/css">
 
-<hr>
-
 <div class="container">
 
     <div class="jumbotron videoHide">
@@ -27,9 +25,6 @@ layout: base
     </div>
 </div>
     
-<hr>
-
-
 <!--  java script code -->
 
 <script>
