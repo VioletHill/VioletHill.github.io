@@ -87,6 +87,18 @@
       }
     </style>
 
+
+    <script>
+        $(document).ready(function(){
+          var url=window.location.pathname;
+          if (url=="/") url="home";
+          else{
+              url=url.substring(1);
+              url=url.substring(0,url.length-1);
+          }
+          $("#"+url+"Nav").addClass('active');
+        });
+    </script>
 </head>
 
 
@@ -99,11 +111,11 @@
                 <div class="navbar-inner">
                     <div class="container">
                         <ul class="nav">
-                            <li class="active"><a href="#">Home</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Projects</a></li>
-                            <li><a href="/about">About</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li id="homeNav"><a href="/">Home</a></li>
+                            <li id="blogNav"><a href="/blog">Blog</a></li>
+                            <li id="projectsNav"><a href="/projects">Projects</a></li>
+                            <li id="aboutNav"><a href="/about">About</a></li>
+                            <li id="contactNav"><a href="/contact">Contact</a></li>
                         </ul>
                     </div>
                 </div>

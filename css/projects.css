@@ -1,0 +1,20 @@
+
+.flowItem{
+
+}
+
+.projectIcon{
+	width: 40%;
+	min-width: 50px;
+	max-width: 100px;
+	border-radius: 20%;
+}
+
+.projectItemTitle{
+	font-size: 14px;
+}
+
+.projectItemInfo{
+	font-size:13px;
+	color:#878787;
+}
