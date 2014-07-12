@@ -55,7 +55,9 @@ layout: base
 					<span class="projectItemTitle">兼容</span>:<span class="projectItemInfo"> 需要 iOS 7.0 或更高版本。与 iPad 兼容。<br></span> <br>
 				</p>
 			</div>
-
+		</div>	
+		
+		<div class="row-fluid flowItem">
 			<div class="span4">
 				<h3>培根词汇 HD</h3>
 				<img src="/images/peigenhd.jpg" class="projectIcon" />
@@ -71,7 +73,6 @@ layout: base
 					<span class="projectItemTitle">兼容</span>:<span class="projectItemInfo"> 需要 iOS 7.0 或更高版本。与 iPad 兼容。</span> <br>
 				</p>
 			</div>
-			
 
 			<div class="span4">
 				<h3>一键加86</h3>

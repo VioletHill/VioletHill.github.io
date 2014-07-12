@@ -20,7 +20,7 @@ layout: base
     <div class="homeVideoDiv" style="display:none; text-align:center">
         <div class="homeVideoPlay">
             <div class="videoClose"></div>
-            <video id="homeVideo" src="media/home.mp4" controls="controls" onended="videoEnd()"></video>
+            <video id="homeVideo" src="media/wwdc_start.mov" style="width:90%; max-width:900px" controls="controls" onended="videoEnd()"></video>
         </div>
     </div>
 </div>
