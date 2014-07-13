@@ -31,14 +31,15 @@
 .webImageShow{
 	width:100%;
 	background-color: black;
+	overflow: hidden;
 }
 
 .webFluidItemImg{
-	display:inline-block;
 	opacity: 0.3;
 	width:23%;
 	height:142px;
 	float:left;
+	display:inline-block;
 }
 
 .greTitleDiv{
