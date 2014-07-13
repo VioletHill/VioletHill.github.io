@@ -280,9 +280,8 @@ layout: base
 	function showImageAtIndex($indexImage,$parent)
 	{	
 		$parent.find(".webFluidItemImg").stop();
-		$parent.find(".webFluidItemImg").not($indexImage).animate({"width": "23%","opacity": "0.2"},"0.2",function(){
-				$indexImage.animate({"width": "31%", "opacity": "1"},"0.2");
-		});
+		$parent.find(".webFluidItemImg").not($indexImage).animate({"width": "23%","opacity": "0.2"},"0.5");
+		$indexImage.animate({"width": "31%", "opacity": "1"},"0.5");
 	}
 
 
