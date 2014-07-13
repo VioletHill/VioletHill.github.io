@@ -257,7 +257,7 @@ layout: base
 		<hr>
 		<div style="width:100%; text-align:center">
 			<h2>感谢和我一起并肩作战的队友们</h2>
-			<h2>因为你们,我才能获得更大的进步️</h2>
+			<h2>因为你们,我才能获得更大的进步</h2>
 		</div>
 	</div>
 </div>
