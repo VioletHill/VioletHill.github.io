@@ -18,3 +18,33 @@
 	font-size:13px;
 	color:#878787;
 }
+
+.webTitle{
+	width:100%;
+	text-align: center;
+}
+
+.webFluidItem{
+	width:100%;
+}
+
+.webImageShow{
+	width:100%;
+	background-color: black;
+}
+
+.webFluidItemImg{
+	display:inline-block;
+	opacity: 0.3;
+	width:23%;
+	height:142px;
+	float:left;
+}
+
+.greTitleDiv{
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 100px;
+	height: 100px;
+	border-radius: 20%;
+}
