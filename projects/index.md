@@ -10,7 +10,7 @@ layout: base
 			<h2>iOS</h2>
 				{% for project in site.categories.ios_projects %}
              	<div class="span4">
-            		<h3>{{ project.title }}</h3>
+            		<a href="{{project.url}}"><h3>{{ project.title }}</h3></a>
 					<img src="{{project.image}}" class="projectIcon" />
 					<br>
 					<br>
