@@ -6,95 +6,42 @@ layout: base
 
 <div class="container">
 	<div class="container-fluid">
-		<h2>iOS</h2>
-		<div class="row-fluid flowItem">
-			<div class="span4">
-				<h3>转转贪吃蛇</h3>
-				<img src="/images/iOS/snake.jpg" class="projectIcon" />
-				<br>
-				<br>
-				<p>
-					<span class="projectItemTitle">免费</span><br>
-					<span class="projectItemTitle">类别</span>:<span class="projectItemInfo"> 游戏</span><br>
-					<span class="projectItemTitle">发布</span>:<span class="projectItemInfo"> 2014年03月09日</span><br>
-					<span class="projectItemTitle">版本</span>:<span class="projectItemInfo"> 1.0</span><br>
-					<span class="projectItemTitle">大小</span>:<span class="projectItemInfo"> 102 MB</span><br>
-					<span class="projectItemTitle">版权</span>:<span class="projectItemInfo"> © 2014 同济大学苹果俱乐部</span><br>
-					<span class="projectItemTitle">兼容</span>:<span class="projectItemInfo"> 需要 iOS 6.0 或更高版本。与 iPhone、iPad、iPod touch 兼容。 此 App 已针对 iPhone 5 进行优化。</span> <br>
-
-				</p>
-				
-			</div>
-
-			<div class="span4">
-				<h3>培根词汇</h3>
-				<img src="/images/iOS/peigen.jpg" class="projectIcon" />
-				<br>
-				<br>
-				<p>
-					<span class="projectItemTitle">¥18.00</span><br>
-					<span class="projectItemTitle">类别</span>:<span class="projectItemInfo"> 教育</span><br>
-					<span class="projectItemTitle">更新</span>:<span class="projectItemInfo"> 2014年03月04日</span><br>
-					<span class="projectItemTitle">版本</span>:<span class="projectItemInfo"> 1.1</span><br>
-					<span class="projectItemTitle">大小</span>:<span class="projectItemInfo"> 9.4 MB</span><br>
-					<span class="projectItemTitle">版权</span>:<span class="projectItemInfo"> © Douglas Harper</span><br>
-					<span class="projectItemTitle">兼容</span>:<span class="projectItemInfo"> 需要 iOS 7.0 或更高版本。与 iPhone、iPad、iPod touch 兼容。 此 App 已针对 iPhone 5 进行优化。</span> <br>
-				</p>
-			</div>
-
-			<div class="span4">
-				<h3>室内庭院</h3>
-				<img src="/images/iOS/chengshi.jpg" class="projectIcon" />
-				<br>
-				<br>
-				<p>
-					<span class="projectItemTitle">免费</span><br>
-					<span class="projectItemTitle">类别</span>:<span class="projectItemInfo"> 游戏</span><br>
-					<span class="projectItemTitle">发布</span>:<span class="projectItemInfo"> 2014年07月02日</span><br>
-					<span class="projectItemTitle">版本</span>:<span class="projectItemInfo"> 1.0</span><br>
-					<span class="projectItemTitle">大小</span>:<span class="projectItemInfo"> 36.3 MB</span><br>
-					<span class="projectItemTitle">版权</span>:<span class="projectItemInfo"> © 2014 同济大学苹果俱乐部</span><br>
-					<span class="projectItemTitle">兼容</span>:<span class="projectItemInfo"> 需要 iOS 7.0 或更高版本。与 iPad 兼容。<br></span> <br>
-
-				</p>
-			</div>
-		</div>	
-		
-		<div class="row-fluid flowItem">
-			<div class="span4">
-				<h3>培根词汇 HD</h3>
-				<img src="/images/iOS/peigenhd.jpg" class="projectIcon" />
-				<br>
-				<br>
-				<p>
-					<span class="projectItemTitle">¥25.00</span><br>
-					<span class="projectItemTitle">类别</span>:<span class="projectItemInfo"> 教育</span><br>
-					<span class="projectItemTitle">发布</span>:<span class="projectItemInfo"> 2014年03月11日</span><br>
-					<span class="projectItemTitle">版本</span>:<span class="projectItemInfo"> 1.0</span><br>
-					<span class="projectItemTitle">大小</span>:<span class="projectItemInfo"> 10.9 MB</span><br>
-					<span class="projectItemTitle">版权</span>:<span class="projectItemInfo"> © Douglas Harper</span><br>
-					<span class="projectItemTitle">兼容</span>:<span class="projectItemInfo"> 需要 iOS 7.0 或更高版本。与 iPad 兼容。</span> <br>
+		<div id="iosProject">
+			<h2>iOS</h2>
+				{% for project in site.categories.ios_projects %}
+             	<div class="span4">
+            		<h3>{{ project.title }}</h3>
+					<img src="{{project.image}}" class="projectIcon" />
 					<br>
-				</p>
-			</div>
-
-			<div class="span4">
-				<h3>一键加86</h3>
-				<img src="/images/iOS/contact86.png" class="projectIcon" />
-				<br>
-				<br>
-				<p>
-					<span class="projectItemTitle">Waiting For Review</span><br>
-					<span class="projectItemTitle">类别</span>:<span class="projectItemInfo"> 生活</span><br>
-					<span class="projectItemTitle">发布</span>:<span class="projectItemInfo"> 待定</span><br>
-					<span class="projectItemTitle">版本</span>:<span class="projectItemInfo"> 1.0</span><br>
-					<span class="projectItemTitle">大小</span>:<span class="projectItemInfo"> 395 KB</span><br>
-					<span class="projectItemTitle">版权</span>:<span class="projectItemInfo"> © 2014 同济大学苹果俱乐部</span><br>
-					<span class="projectItemTitle">兼容</span>:<span class="projectItemInfo"> 需要 iOS 7.0 或更高版本。与 iPhone、iPad、iPod touch 兼容。 此 App 已针对 iPhone 5 进行优化。</span> <br>
-				</p>
-			</div>
-		</div>
-
+					<br>
+					<p>
+						<span class="projectItemTitle">{{project.cost}}</span><br>
+						<span class="projectItemTitle">类别</span>:<span class="projectItemInfo"> {{project.type}}</span><br>
+						<span class="projectItemTitle">{{project.publish}}</span>:<span class="projectItemInfo"> {{project.publishDate}}</span><br>
+						<span class="projectItemTitle">版本</span>:<span class="projectItemInfo"> {{project.version}}</span><br>
+						<span class="projectItemTitle">大小</span>:<span class="projectItemInfo"> {{project.size}}</span><br>
+						<span class="projectItemTitle">版权</span>:<span class="projectItemInfo">{{project.copyright}}</span><br>
+						<span class="projectItemTitle">兼容</span>:<span class="projectItemInfo"> {{project.require}}</span> <br>
+					</p>
+           	 	</div>
+        	{% endfor %}
+ 		</div>
+ 		<script>
+ 			$("#iosProject").ready(function(){
+ 				var spans=$("#iosProject").find(".span4");
+ 				for (var i=0; i<=Math.floor(spans.length/3); i++){
+ 					if (i==0){
+						$("#iosProject").find(".span4:lt(3)").wrapAll('<div class="row-fluid flowItem"></div>');
+ 					}
+ 					else{
+ 						var selectG="gt("+(i*3-1)+")";
+  						$("#iosProject").find(".span4:"+selectG+":lt(3)").wrapAll('<div class="row-fluid flowItem"></div>');
+ 					}
+ 					
+ 				}
+ 			});
+ 		</script>
+	</div>	
 		<hr>
 		<h2>Web</h2>
 		<div class="container-fluid">
@@ -233,7 +180,7 @@ layout: base
 			<div class="span6">
 				<h3><a href="https://github.com/VioletHill/OS_TrafficLight">操作系统－红绿灯</a></h3>
 				<p class="projectItemInfo">
-					Hi~~操作系统的第一个课程设计项目。。。当时我做了两个。。一个在iOS平台上～～还特意为红绿灯做了一个游戏模式，不过 似乎只能在iOS6一下的操作系统了，iOS7会导致部分坐标错位
+					Hi~~操作系统的第一个课程设计项目。。。当时我做了两个。。一个在iOS平台上～～还特意为红绿灯做了一个游戏模式，不过 似乎只能在iOS6以下的操作系统了，iOS7会导致部分坐标错位
 				</p>
 			</div>
 
@@ -267,7 +214,7 @@ layout: base
 <script>
 	$(".webFluidItem").ready(function(){
 		$(".lastImgItem").css({
-			"width":"31%",
+			"width":"30%",
 			"opacity":"1",
 		});
 		$(".webFluidItemImg").hover(function(){
@@ -282,7 +229,7 @@ layout: base
 	{	
 		$parent.find(".webFluidItemImg").stop();
 		$parent.find(".webFluidItemImg").not($indexImage).animate({"width": "23%","opacity": "0.2"},"0.5");
-		$indexImage.animate({"width": "31%", "opacity": "1"},"0.5");
+		$indexImage.animate({"width": "30%", "opacity": "1"},"0.5");
 	}
 
 
