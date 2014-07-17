@@ -214,7 +214,7 @@ layout: base
 <script>
 	$(".webFluidItem").ready(function(){
 		$(".lastImgItem").css({
-			"width":"30%",
+			"width":"31%",
 			"opacity":"1",
 		});
 		$(".webFluidItemImg").hover(function(){
@@ -229,7 +229,7 @@ layout: base
 	{	
 		$parent.find(".webFluidItemImg").stop();
 		$parent.find(".webFluidItemImg").not($indexImage).animate({"width": "23%","opacity": "0.2"},"0.5");
-		$indexImage.animate({"width": "30%", "opacity": "1"},"0.5");
+		$indexImage.animate({"width": "31%", "opacity": "1"},"0.5");
 	}
 
 
