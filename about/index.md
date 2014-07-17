@@ -16,16 +16,84 @@ layout: base
 		<hr>
 	</div>
 
+	<!-- var colors=["#1f77b4","#ff7f0e","#2ca02c","#d62728","#9467bd","#282828","#ee19f1"]; -->
+
 
 	<div class="infoContainer">
 		<h3>Skills</h3>
 		<br>
-		<p><span class="title">Favorite</span><span class="info">Objective-C</span></p>
-		<p><span class="title">Learning</span><span class="info">Swift</span></p>
-		<p><span class="title">Interesting</span><span class="info">JavaScript</span></p>
-		<p><span class="title">Love</span><span class="info">HTML</span></p>
-		<p><span class="title">Like</span><span class="info">PHP</span></p>
-		<p><span class="title">Familiar</span><span class="info">Java</span></p>
+		<div class="skillContainer">
+			<span class="title">Favorite</span>
+			<span class="barContainer">
+				<div class="progress progress-striped active" style="margin-bottom:0">
+  					<div class="bar" style="width: 90%; background-color:#1f77b4">
+  						<div class="info barInfo">Objective-C</div>
+  					</div>
+  				</div>
+			</span>
+		</div>	
+		<div style="clear:both"></div>
+
+		<div class="skillContainer">
+			<span class="title">Learning</span>			
+			<span class="barContainer">
+				<div class="progress progress-striped active" style="margin-bottom:0">
+  					<div class="bar" style="width: 10%; background-color:#ff7f0e">
+  						<div class="info barInfo">Swift</div>
+  					</div>
+				</div>
+			</span>
+		</div>
+		<div style="clear:both"> </div>
+
+		<div class="skillContainer">
+			<span class="title">Interesting</span>
+			<span class="barContainer">
+				<div class="progress progress-striped active" style="margin-bottom:0">
+  					<div class="bar" style="width: 60%; background-color:#2ca02c">
+						<div class="info barInfo">JavaScript</div>
+  					</div>
+				</div>
+			</span>
+		</div>
+		<div style="clear:both"></div>
+
+		<div class="skillContainer">
+			<span class="title">Love</span>
+			<span class="barContainer">
+				<div class="progress progress-striped active" style="margin-bottom:0">
+  					<div class="bar" style="width: 60%; background-color:#d62728">
+						<div class="info barInfo">HTML</div>
+  					</div>
+				</div>
+			</span>
+		</div>
+		<div style="clear:both"></div>
+
+		<div class="skillContainer">
+			<span class="title">Like</span>
+			<span class="barContainer">
+				<div class="progress progress-striped active" style="margin-bottom:0">
+  					<div class="bar" style="width: 50%; background-color:#9467bd">
+						<div class="info barInfo">PHP</div>
+  					</div>
+				</div>
+			</span>
+		</div>
+		<div style="clear:both"></div>
+
+		<div class="skillContainer">
+			<span class="title">Familiar</span>
+			<span class="barContainer">
+				<div class="progress progress-striped active" style="margin-bottom:0">
+  					<div class="bar" style="width: 30%; background-color:#282828">
+						<div class="info barInfo">Java</div>
+  					</div>
+				</div>
+			</span>
+		</div>
+		<div style="clear:both"></div>
+
 		<hr>
 	</div>
 

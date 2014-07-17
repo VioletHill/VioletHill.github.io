@@ -7,10 +7,26 @@
 .info{
 	font-size:19px;
 	color:#878787;
+	text-align: left;
 }
 
 
 .infoHr{
 	margin-bottom:10px; 
 	margin-top:10px;
+}
+
+.skillContainer{
+	margin-bottom: 20px;
+	width: 100%;
+	white-space: nowrap;
+}
+
+.barContainer{
+	width:60%; 
+	display:inline-block;
+}
+
+.barInfo{
+	color: white;
 }
