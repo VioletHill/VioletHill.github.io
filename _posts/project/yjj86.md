@@ -5,7 +5,7 @@ category: ios_projects
 image: /images/iOS/contact86.png 
 cost: 免费
 type: 生活
-publish: Waiting for review
+publish: Reject by apple
 version: 1.0
 publishDate: 待定
 size: 395 KB
