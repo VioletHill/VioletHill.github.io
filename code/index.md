@@ -83,7 +83,7 @@ layout: base
 
 	$(document).ready(function(){
 
-		$.getJSON("http://osrc.dfm.io/violethill.json",
+		$.getJSON("http://osrc.dfm.io/violethill.json?callback=?",
 			function(data){
 
 				setWorkTime(data.usage.day);
