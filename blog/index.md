@@ -11,7 +11,6 @@ layout: base
             <li class="articalHide">
         
                 <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-                <a href="{{post.url}}#disqus_thread">Link</a>.
                 <p><p>
                 <div class="title-desc">{{ post.description }}</div>
             </li>
