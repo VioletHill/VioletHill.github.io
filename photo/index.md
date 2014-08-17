@@ -9,9 +9,9 @@ layout: base
 	<div class="container-fluid" id="ebay_photo">
 
         {% for photo in site.categories.ebay_photo %}
-        	<a href="{{photo.background}}" class="box span3" data-lightbox="ebay" data-title="xxx">
+        	<a href="{{photo.largeImage}}" class="box span3" data-lightbox="{{photo.album}}" data-title="{{photo.title}}">
         		<br>
-        		<img class="flowImg" src="{{photo.background}}" >
+        		<img class="flowImg" src="{{photo.smallImage}}" >
         		<br>
         		<br>
         		<p style="word-wrap: break-word">{{photo.message}}</p>
