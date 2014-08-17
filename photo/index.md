@@ -4,6 +4,9 @@ layout: base
 
 <link rel="stylesheet" href="/css/photo.css" type="text/css" />
 
+<link rel="stylesheet" href="css/screen.css">
+<link rel="stylesheet" href="css/lightbox.css">
+
 <div class="container">
 	<div class="container-fluid" id="ebay_photo">
 
@@ -23,6 +26,9 @@ layout: base
 
 <script src="/js/masonry.pkgd.min.js"></script>
 <script src="/js/imagesloaded.3.1.8.js"></script>
+
+<script src="/js/lightbox.min.2.7.1.js"></script>
+
 
 <script>
     $(document).ready(function(){

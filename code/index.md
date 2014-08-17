@@ -77,6 +77,8 @@ layout: base
 </div>
 
 
+<script src="/js/highcharts.js"></script>
+
 <script>
 	
 	var colors=["#1f77b4","#ff7f0e","#2ca02c","#d62728","#9467bd","#282828","#ee19f1"];
