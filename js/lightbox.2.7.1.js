@@ -330,13 +330,7 @@
             location.href = $(this).attr('href');
           });
       }
-    
-      if (this.album.length > 1 && this.options.showImageNumberLabel) {
-        this.$lightbox.find('.lb-number').text(this.options.albumLabel(this.currentImageIndex + 1, this.album.length)).fadeIn('fast');
-      } else {
-        this.$lightbox.find('.lb-number').hide();
-      }
-    
+        
       this.$outerContainer.removeClass('animating');
     
       this.$lightbox.find('.lb-dataContainer').fadeIn(this.options.resizeDuration, function() {
