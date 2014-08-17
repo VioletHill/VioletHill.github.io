@@ -16,7 +16,7 @@
       this.fadeDuration                = 500;
       this.fitImagesInViewport         = true;
       this.resizeDuration              = 700;
-      this.positionFromTop             = 50;
+      this.positionFromTop             = 20;
       this.showImageNumberLabel        = true;
       this.alwaysShowNavOnTouchDevices = false;
       this.wrapAround                  = false;
@@ -58,8 +58,19 @@
     // Attach event handlers to the new DOM elements. click click click
     Lightbox.prototype.build = function() {
       var self = this;
-      $("<div id='lightboxOverlay' class='lightboxOverlay'></div><div id='lightbox' class='lightbox'><div class='lb-outerContainer'><div class='lb-container'><img class='lb-image' src='' /><div class='lb-nav'><a class='lb-prev' href='' ></a><a class='lb-next' href='' ></a></div><div class='lb-loader'><a class='lb-cancel'></a></div></div></div><div class='lb-dataContainer'><div class='lb-data'><div class='lb-details'><span class='lb-caption'></span></div><div class='lb-closeContainer'><a class='lb-close'></a></div></div></div></div>").appendTo($('body'));
-      
+      var delayItem="<div id='lightboxOverlay' class='lightboxOverlay'></div>";
+      var imageItem="<img class='lb-image' src='' />";
+      var lb_prevItem="<div class='lb-nav'><a class='lb-prev' href='' ></a><a class='lb-next' href='' ></a></div>";
+      var loderItem="<div class='lb-loader'><a class='lb-cancel'></a></div>";
+      var lb_outerContainerItem="<div class='lb-outerContainer'><div class='lb-container'>"+imageItem+lb_prevItem+loderItem+"</div></div>";
+
+      var closeContainerItem="<div class='lb-closeContainer'><a class='lb-close'></a></div>";
+      var lb_dataDetailItem="<div class='lb-details'><br><span class='lb-caption'></span></div>";
+  
+      var lb_dataContainerItem="<div class='lb-dataContainer'><div class='lb-data'>"+lb_dataDetailItem  +"</div></div>";
+
+       $(delayItem+"<div id='lightbox' class='lightbox'>" +  lb_outerContainerItem  + lb_dataContainerItem + "</div>").appendTo($('body'));
+
       // Cache jQuery objects
       this.$lightbox       = $('#lightbox');
       this.$overlay        = $('#lightboxOverlay');
