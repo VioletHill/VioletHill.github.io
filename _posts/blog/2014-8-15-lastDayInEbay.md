@@ -229,7 +229,7 @@ description: 在ebay的最后一天 我给同事们写的最后一封邮件
 		<strong><span style="color:#330033;">From Oscar</span></strong>
 	</p>
 	<p>
-		<span style="color:#1f497d;"><span lang="EN-US" style="font-size: 10.5pt; font-family: Calibri, sans-serif; color: rgb(31, 73, 125);">Keep in touch.</span><br /><br/><span lang="EN-US" style="font-size: 10.5pt; font-family: Wingdings; color: rgb(31, 73, 125);">Best Regards<br> Oscar Yang</span><br />
+		<span style="color:#1f497d;"><span lang="EN-US" style="font-size: 10.5pt; font-family: Calibri, sans-serif; color: rgb(31, 73, 125);">Keep in touch.</span>
 		</span>
 	</p>
 </div>
