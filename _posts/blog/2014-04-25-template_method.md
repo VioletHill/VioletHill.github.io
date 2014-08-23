@@ -7,14 +7,14 @@ description: 设计模式之－template method(模版方法)
 <div class="container">
 <p>
 	<h4>定义:</h4>
-	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the skeleton of an algorithm in an operation, deferring some steps to subclasses.- Template Method lets subclasses redefine certain steps of an algorithm without letting them to change the algorithm's structure.
+	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The skeleton of an algorithm in an operation, deferring some steps to subclasses.- Template Method lets subclasses redefine certain steps of an algorithm without letting them to change the algorithm's structure.
 </p>
 <p>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;定义一个操作中的算法的骨架，而将一些步骤延迟到子类中。Template Method使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤。
 </p>
 <p>
 	<h4>问题:</h4>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;写一个类SortArray，该类中有一个大小为10的int数组，同时对外提供一个sort方法，利用简单的插入排序对数字排序
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;写一个类SortArray，该类中有一个大小为10的NSNumber的数组，同时对外提供一个sort方法，利用简单的插入排序对数字排序
 </p>
 
 <br>
@@ -66,7 +66,7 @@ description: 设计模式之－template method(模版方法)
     return _array;
 }
 
-#pragma mark - sort algrithm
+#pragma mark - sort algorithm
 
 - (void)sort
 {
@@ -116,7 +116,7 @@ description: 设计模式之－template method(模版方法)
 @end</pre>
 <br />
 
-<pre name="code" class="objc">#pragma mark - sort algrithm
+<pre name="code" class="objc">#pragma mark - sort algorithm
 
 - (void)sort
 {
