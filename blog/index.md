@@ -10,11 +10,13 @@ layout: base
         {% for post in site.categories.blog %}
             <li class="articalHide">        
                 <div>
-                    <a href="{{ post.url }}"><h4>{{ post.title }}</h4></a>
+                    <a href="{{ post.url }}"><h4>{{ post.title }}</h4> </a>
+                    
                     <div class="title-desc">
-                        <span>
-                            {{ post.description }}
-                        </span>
+                        {{ post.description }}
+                        <div style="float:right">
+                            {{ post.date|date:"%Y-%m-%d" }}
+                        </div>
                      </div>
                 </div>
                 <hr>
@@ -30,19 +32,20 @@ layout: base
 </div>
 
 <script>
-    var pageCount=5;
+    var pageCount=6;
     var totalPage=0;
     var articals;
     $(".artical-list").ready(function(){
         articals=$(".artical-list").find("li");
-        totalPage=Math.floor(articals.length/pageCount);
-        if (totalPage>0){
-            addPageNum(totalPage);
-            setPage(0);
-        }
-        else{
-            articals.removeClass('articalHide');
-        }
+        totalPage=Math.floor(articals.length-1)/pageCount ;
+        addPageNum(totalPage);
+        setPage(0);
+
+        // if (totalPage>0){
+        //           }
+        // else{
+        //     articals.removeClass('articalHide');
+        // }
     });
 
     function setPage(page)
