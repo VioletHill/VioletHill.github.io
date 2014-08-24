@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  ebay的最后一天  
+title:  eBay的最后一天  
 category: blog
-description: 在ebay的最后一天 我给同事们写的最后一封邮件
+description: 在eBay的最后一天 我给同事们写的最后一封邮件
 ---
 <div class="container">
 <p>

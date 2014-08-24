@@ -7,8 +7,9 @@ layout: base
 <link rel="stylesheet" href="/css/projects.css"  type="text/css" />
 
 <div class="container">
-    <h1 class="entry-title">{{ page.title }}</h1>
-    <p class="entry-date">{{ page.date|date:"%Y-%m-%d" }}</p>
+    <h2 class="entry-title" style="text-align:center">{{ page.title }}</h2>
+    <p class="entry-date" style="text-align:right">{{ page.date|date:"%Y-%m-%d" }}</p>
+    <div class="cleafix"></div>
     <div>
         <hr>
         {{ content }}

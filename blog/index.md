@@ -8,11 +8,16 @@ layout: base
     <div class="section">
         <ul class="artical-list">
         {% for post in site.categories.blog %}
-            <li class="articalHide">
-        
-                <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-                <p><p>
-                <div class="title-desc">{{ post.description }}</div>
+            <li class="articalHide">        
+                <div>
+                    <a href="{{ post.url }}"><h4>{{ post.title }}</h4></a>
+                    <div class="title-desc">
+                        <span>
+                            {{ post.description }}
+                        </span>
+                     </div>
+                </div>
+                <hr>
             </li>
         {% endfor %}
         </ul>
@@ -25,7 +30,7 @@ layout: base
 </div>
 
 <script>
-    var pageCount=10;
+    var pageCount=5;
     var totalPage=0;
     var articals;
     $(".artical-list").ready(function(){
@@ -53,7 +58,7 @@ layout: base
 
     function addPageNum(totalPage)
     {
-        for (var i=0; i<totalPage; i++)
+        for (var i=0; i<=totalPage; i++)
         {
             var li='<li><a href="javascript:setPage('+i+')">'+(i+1)+'</a></li>';
             $("#pageUl").append(li);
