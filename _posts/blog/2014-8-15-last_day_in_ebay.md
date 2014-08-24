@@ -24,7 +24,7 @@ description: 在eBay的最后一天 我给同事们写的最后一封邮件
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Alex: 感谢你过去4个月的照顾，尤其是我刚刚来的时候，对开发环境简直就是（此处省略无数～！@＃¥％……&amp;＊）&nbsp;&nbsp;，还专门为我写了个bat文件辅助我开发。Mac下这种优越环境生活惯了的孩子 还是应该多像你学学的。永远也不会忘记我们一起奋斗过的&nbsp;dbinabox，如果我留下了什么bug&nbsp;你要努力帮我修复～～&nbsp;
 </p>
 <p>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Liu, Tao: 哪天变的和你一样有气质我就心满意足了&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Liu, Tao: 哪天变的和你一样有气质我就心满意足了&nbsp;&nbsp;
 </p>
 <p>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Haibo: oracle的专家 谢谢你在过去的4个月为我指导的数据库的知识，虽然有时候也听不太懂。。不过 没关系了 这是成长的过程吧
