@@ -2,12 +2,16 @@
 layout: post
 title:  Think Different  
 category: blog
-description: 乔布斯在斯坦福大学的演讲稿
+description: 《Think Different》广告语全文 以及乔布斯2005年斯坦福大学演讲稿
 ---
 <div class="container">
 <p>
+	<h4>《Think Different》广告语全文 </h4>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Here's to the crazy ones. The misfits, the rebels. The troublemakers. The round pegs in the square holes. The ones who see things differently. They're not fond of rules. You can quote them, disagree with them, glorify or vilify them. About the only thing you can't do is ignore them. Because they change things. They push the human race forward. And while some may see them as the crazy ones, we see genius. Because the ones who are crazy enough to think that they can change the world, are the ones who do.
 	<br>
+	<br>
+
+	<h4>乔布斯2005年斯坦福大学演讲稿全文</h4>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I am honored to be with you today at your commencement from one of the finest universities in the world. I never graduated from college. Truth be told, this is the closest I've ever gotten to a college graduation. Today I want to tell you three stories from my life. That's it. No big deal. Just three stories.
 	<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The first story is about connecting the dots.
@@ -60,7 +64,7 @@ description: 乔布斯在斯坦福大学的演讲稿
 	<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stewart and his team put out several issues of The Whole Earth Catalog, and then when it had run its course, they put out a final issue. It was the mid-1970s, and I was your age. On the back cover of their final issue was a photograph of an early morning country road, the kind you might find yourself hitchhiking on if you were so adventurous. Beneath it were the words: "Stay Hungry. Stay Foolish." It was their farewell message as they signed off. Stay Hungry. Stay Foolish. And I have always wished that for myself. And now, as you graduate to begin anew, I wish that for you.
 	<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stay Hungry. Stay Foolish.
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:red">Stay Hungry. Stay Foolish.</span>
 	<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thank you all very much.
 </div>
