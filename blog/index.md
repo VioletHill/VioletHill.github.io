@@ -32,7 +32,7 @@ layout: base
 </div>
 
 <script>
-    var pageCount=6;
+    var pageCount=8;
     var totalPage=0;
     var articals;
     $(".artical-list").ready(function(){
