@@ -67,4 +67,5 @@ description: 《Think Different》广告语全文 以及乔布斯2005年斯坦�
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:red">Stay Hungry. Stay Foolish.</span>
 	<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thank you all very much.
+</p>
 </div>
