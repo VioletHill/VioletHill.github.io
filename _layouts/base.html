@@ -15,6 +15,21 @@
     <script src="/js/jquery-1.11.0.min.js"></script>
     <script src="/js/bootstrap.js"></script>
 
+    <script>
+        $(document).ready(function(){
+
+          if(window.localStorage){
+            var isIe = /msie/.test(navigator.userAgent.toLowerCase());
+            if (isIe==true && window.localStorage.ieSupposed){
+              window.localStorage.ieSupposed="true";
+              $("#ieWarning").modal();
+            } 
+
+          }
+
+        });
+    </script>
+
     <style type="text/css">
       body {
         padding-top: 20px;
@@ -145,5 +160,16 @@
       <p>
       <p style="text-align:center">© 2014 <a href="mailto:mailqiufeng@iCloud.com">QiuFeng</a> Tongji University</p>
     </div>
+
+    <div class="modal hide fade" id="ieWarning">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3>Warning</h3>
+        </div>
+        <div class="modal-body">
+          <p>IE may not supposed, for your best experience, please use use Chrome, Firefox or Safari</p>
+        </div>
+    </div>
+
 </body>
 </html>
