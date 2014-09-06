@@ -20,6 +20,7 @@ layout: base
         {% endfor %}
     </div>
 
+    <h3 id="loadingInfo">Loading...</h3>
 </div>
 
 <script src="/js/masonry.pkgd.min.js"></script>
@@ -33,7 +34,7 @@ layout: base
         $container.imagesLoaded(function(){
 
             $(".box").css({display:"block"});
-
+            $("#loadingInfo").css({display:"none"});
             $container.masonry({
                 itemSelector:'.box',
                 isAnimated:true,
