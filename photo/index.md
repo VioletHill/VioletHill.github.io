@@ -9,9 +9,9 @@ layout: base
 	<div class="container-fluid" id="ebay_photo">
 
         {% for photo in site.categories.ebay_photo %}
-        	<a href="{{photo.largeImage}}" class="box span3" data-lightbox="{{photo.album}}" data-title="{{photo.title}}">
+        	<a href="{{photo.largeImage}}" class="box span3" data-lightbox="{{photo.album}}" data-title="{{photo.title}}" style="display:none">
         		<br>
-        		<img class="flowImg" src="{{photo.smallImage}}" >
+        		<img class="flowImg" src="{{photo.smallImage}}">
         		<br>
         		<br>
         		<p style="word-wrap: break-word">{{photo.message}}</p>
@@ -31,10 +31,14 @@ layout: base
     $(document).ready(function(){
         var $container=$("#ebay_photo");
         $container.imagesLoaded(function(){
+
+            $(".box").css({display:"block"});
+
             $container.masonry({
                 itemSelector:'.box',
                 isAnimated:true,
-            })
+            });
+
         });
     })
 </script>
