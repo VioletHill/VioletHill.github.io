@@ -20,7 +20,7 @@ layout: base
         {% endfor %}
     </div>
 
-    <h3 id="loadingInfo">Loading...</h3>
+    <h3 id="loadingInfo" style="text-align:center">Loading...</h3>
 </div>
 
 <script src="/js/masonry.pkgd.min.js"></script>
