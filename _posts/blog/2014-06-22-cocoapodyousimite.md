@@ -20,8 +20,8 @@ description: 解决cocoapods 在 mac 10.10下报错
 </p>
 <p>
 </p>
-<p style="border:0px; font-family:Oxygen,'Helvetica Neue',Arial,sans-serif; font-size:18px; margin-top:0px; margin-bottom:1.5em; outline:0px; padding-top:0px; padding-bottom:0px; vertical-align:baseline; color:rgb(68,68,68); line-height:29px">
-	<code style="border:0px; font-family:Monaco,Consolas,'Andale Mono','DejaVu Sans Mono',monospace; font-size:15px; margin:0px; outline:0px; padding:0px; vertical-align:baseline; line-height:normal">/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require': cannot load such file -- xcodeproj/prebuilt/universal.x86_64-darwin14-2.0.0/xcodeproj_ext (LoadError)<br style="" />
+<p style="border:0px; font-family:Oxygen,'Helvetica Neue',Arial,sans-serif; font-size:18px; margin-top:0px; margin-bottom:1.5em; outline:0px; padding-top:0px; padding-bottom:0px; vertical-align:baseline; color:rgb(68,68,68); ">
+	<span style="border:0px; font-family:Monaco,Consolas,'Andale Mono','DejaVu Sans Mono',monospace; font-size:15px; margin:0px; outline:0px; padding:0px; vertical-align:baseline; line-height:normal; color:red">/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require': cannot load such file -- xcodeproj/prebuilt/universal.x86_64-darwin14-2.0.0/xcodeproj_ext (LoadError)<br style="" />
 	from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require'<br style="" />
 	from /Library/Ruby/Gems/2.0.0/gems/xcodeproj-0.16.1/lib/xcodeproj/ext.rb:6:in `rescue in&nbsp;'<br style="" />
 	from /Library/Ruby/Gems/2.0.0/gems/xcodeproj-0.16.1/lib/xcodeproj/ext.rb:3:in `'<br style="" />
@@ -35,7 +35,7 @@ description: 解决cocoapods 在 mac 10.10下报错
 	from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require'<br style="" />
 	from /Library/Ruby/Gems/2.0.0/gems/cocoapods-0.32.1/bin/pod:32:in `'<br style="" />
 	from /usr/bin/pod:23:in `load'<br style="" />
-	from /usr/bin/pod:23:in `&lt;main&gt;'</code>
+	from /usr/bin/pod:23:in `&lt;main&gt;'</span>
 </p>
 <div>
 	<code style="border:0px; font-family:Monaco,Consolas,'Andale Mono','DejaVu Sans Mono',monospace; font-size:15px; margin:0px; outline:0px; padding:0px; vertical-align:baseline; line-height:normal"><br />
