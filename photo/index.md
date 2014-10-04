@@ -9,7 +9,7 @@ layout: base
 	<div class="container-fluid" id="ebay_photo">
 
         {% for photo in site.categories.ebay_photo %}
-        	<a href="{{photo.largeImage}}" class="box span3" data-lightbox="{{photo.album}}" data-title="{{photo.title}}" style="display:none">
+        	<a href="{{photo.smallImage}}" class="box span3" data-lightbox="{{photo.album}}" data-title="{{photo.title}}">
         		<br>
         		<img class="flowImg" src="{{photo.smallImage}}">
         		<br>
@@ -20,7 +20,6 @@ layout: base
         {% endfor %}
     </div>
 
-    <h3 id="loadingInfo" style="text-align:center">Loading...</h3>
 </div>
 
 <script src="/js/masonry.pkgd.min.js"></script>
@@ -32,14 +31,10 @@ layout: base
     $(document).ready(function(){
         var $container=$("#ebay_photo");
         $container.imagesLoaded(function(){
-
-            $(".box").css({display:"block"});
-            $("#loadingInfo").css({display:"none"});
             $container.masonry({
                 itemSelector:'.box',
                 isAnimated:true,
             });
-
         });
     })
 </script>

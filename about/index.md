@@ -4,7 +4,7 @@ layout: base
 
 <link rel="stylesheet" href="/css/about.css"  type="text/css" />
 
-<div class="container">
+<div class="container"style="width:1000px">
 	<div class="infoContainer">
 		<h3>Education</h3>
 		<br>
@@ -19,7 +19,7 @@ layout: base
 	<!-- var colors=["#1f77b4","#ff7f0e","#2ca02c","#d62728","#9467bd","#282828","#ee19f1"]; -->
 
 
-	<div class="infoContainer">
+	<div class="infoContainer"  style="width:1000px">
 		<h3>Skills</h3>
 		<br>
 		<div class="skillContainer">
@@ -98,17 +98,58 @@ layout: base
 	</div>
 
 
-	<div class="infoContainer">
+	<div class="infoContainer" style="width:1000px">
 		<h3>Experiences</h3>
 		<br>
-		<p><span class="title">2012</span><span class="info">Volunteer of "Challenge Cup"</span></p>
-		<p><span class="title">2012</span><span class="info">Assistant of Java</span></p>
-		<p><span class="title">2013</span><span class="info">Volunteer of SAP Future IT Leader Summit 2014</span></p>
-		<p><span class="title">2013</span><span class="info">Chairman of Tongji Football Association</span></p>
-		<p><span class="title">2013</span><span class="info">SAP Vacation Training</span></p>
-		<p><span class="title">2014</span><span class="info">Volunteer of  FTC</span></p>
-		<p><span class="title">2014</span><span class="info">Intern of eBay</span></p>
-		<p><span class="title">2014</span><span class="info">Intern of BaiXing</span></p>
+	
+		
+		
+
+		<div id="timeline">
+			<ul id="dates">
+				<li><a href="#time2012">2012</a></li>
+				<li><a href="#time2013">2013</a></li>
+				<li><a href="#time2014">2014</a></li>
+			</ul>
+			<ul id="issues">
+				<li id="time2012">
+					<div>
+						<p><span class="title">Sep.</span><span class="info">Assistant Of "C Language" Course</span></p>
+						<p><span class="title">Sep.</span><span class="info">Became A Member Of "Tongji Apple Club"</span></p>
+						<p><span class="title">Nov.</span><span class="info">Volunteer Of "Challenge Cup"</span></p>
+						<p><span class="title">Dec.</span><span class="info">Silver Prize Of "IBM Master the Mainframe Contest China"</span></p>
+					</div>
+				</li>
+				<li id="time2013">
+					<div>
+						<p><span class="title">May.</span><span class="info">Volunteer Of "Challenge Cup"</span></p>
+						<p><span class="title">Sep.</span><span class="info">Assistant Of "Java Language" Course</span></p>
+						<p><span class="title">Sep.</span><span class="info">Chairman Of Tongji Football Association</span></p>
+						<p><span class="title">Oct.</span><span class="info">Training Of "Start Your Road At SAP"</span></p>
+						<p><span class="title">Nov.</span><span class="info">Volunteer Of SAP Future IT Leader Summit 2013</span></p>
+					</div>
+				</li>
+				<li id="time2014">
+					<div>
+						<p><span class="title">Jan.</span><span class="info">Science And Technology Scholarship Of Tongji University</span></p>
+						<p><span class="title">Feb.</span><span class="info">Volunteer Of  FTC</span></p>
+						<p><span class="title">Apr.</span><span class="info">Intern Of eBay</span></p>
+						<p><span class="title">Sep.</span><span class="info">Intern Of baixing.com</span></p>
+					</div>
+				</li>
+			</ul>
+		</div>
 	</div>
+
+	
 </div>
 
+<script src="/js/jquery.timelinr-0.9.54.js"></script>
+
+<script> 
+		$(function(){
+			$().timelinr({
+					arrowKeys: 'true'
+			});
+		});
+</script>
