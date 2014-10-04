@@ -114,6 +114,7 @@ layout: base
 			<ul id="issues">
 				<li id="time2012">
 					<div>
+						<p><span class="title">Apr.</span><span class="info">Second Prize Of "Programming Contest" In Tongji University</span></p>
 						<p><span class="title">Sep.</span><span class="info">Assistant Of "C Language" Course</span></p>
 						<p><span class="title">Sep.</span><span class="info">Became A Member Of "Tongji Apple Club"</span></p>
 						<p><span class="title">Nov.</span><span class="info">Volunteer Of "Challenge Cup"</span></p>
@@ -122,6 +123,7 @@ layout: base
 				</li>
 				<li id="time2013">
 					<div>
+						<p><span class="title">Apr.</span><span class="info">Second Prize Of "Programming Contest" In Tongji University</span></p>
 						<p><span class="title">May.</span><span class="info">Volunteer Of "Challenge Cup"</span></p>
 						<p><span class="title">Sep.</span><span class="info">Assistant Of "Java Language" Course</span></p>
 						<p><span class="title">Sep.</span><span class="info">Chairman Of Tongji Football Association</span></p>
