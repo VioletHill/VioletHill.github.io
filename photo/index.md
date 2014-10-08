@@ -34,6 +34,7 @@ layout: base
             photoObj.smallImage='{{ photo.smallImage }}';
             photoObj.title='{{ photo.title }}';
             photoObj.album='{{ photo.album }}';
+            photoObj.largeImg=' {{photo.largeImg }} ' ;
             photo.push(photoObj);
         {% endfor %}
 
@@ -43,7 +44,7 @@ layout: base
 
     function loadNext(index){
 
-        var $imgContainer=$('<a href="'+photo[index].smallImage+'" class="box span3" data-lightbox="'+photo[index].album +'" data-title="' + photo[index].title + '"></a>');
+        var $imgContainer=$('<a href="'+photo[index].largeImage+'" class="box span3" data-lightbox="'+photo[index].album +'" data-title="' + photo[index].title + '"></a>');
         $imgContainer.append('<br />');
         $imgContainer.append('<img class="flowImg" src="'+photo[index].smallImage+'">');
 
