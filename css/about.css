@@ -1,7 +1,9 @@
+
 .title{
 	display: inline-block;
 	width:40%;
 	font-size: 20px;
+
 }
 
 .info{
@@ -9,7 +11,6 @@
 	color:#878787;
 	text-align: left;
 }
-
 
 .infoHr{
 	margin-bottom:10px; 
@@ -29,4 +30,60 @@
 
 .barInfo{
 	color: white;
+}
+
+#timeline {
+	width: 1000px;
+	overflow: hidden;
+	position: relative;
+	background: url('../images/dot.gif') left 45px repeat-x;
+	font-family: Georgia, serif;
+}
+
+#dates {
+	width: 800px;
+	height: 60px;
+	overflow: hidden;
+}
+
+#dates li {
+	list-style: none;
+	float: left;
+	width: 100px;
+	height: 50px;
+	font-size: 24px;
+	text-align: center;
+	background: url('../images/biggerdot.png') center bottom no-repeat;
+}
+
+#dates a {
+	line-height: 38px;
+	padding-bottom: 10px;
+}			
+
+#dates .selected {
+		font-size: 38px;
+}
+		
+#issues {
+	width: 1000px;
+	overflow: hidden;
+}	
+
+#issues li {
+	width: 1000px;
+	list-style: none;
+	float: left;
+}
+
+#issues li h1 {
+	font-size: 48px;
+	margin: 20px 0;
+}
+	
+#issues li p {
+	font-size: 14px;
+	margin-right: 70px;
+	font-weight: normal;
+	line-height: 22px;
 }

@@ -13,8 +13,54 @@ layout: base
     <div>
         <hr>
         {{ content }}
+  
+  <br>
+      <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style" style="float:right">
+    <a class="jiathis_button_qzone"></a>
+    <a class="jiathis_button_tsina"></a>
+    <a class="jiathis_button_tqq"></a>
+    <a class="jiathis_button_weixin"></a>
+    <a class="jiathis_button_renren"></a>
+    <a class="jiathis_button_fav"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+    <a class="jiathis_counter_style"></a>
+</div>
+<div class="clearfix"></div>
+        <br>
+        <div>
+        {% assign find = '0' %}
+        {% for post in site.categories.blog %}
+
+            {%  if find == '1' %}
+                {%  assign nextpost=post   %}
+                {%  break %}
+            {%  endif %}
+
+            {%  if post.url == page.url %}
+                {% assign find = '1' %}
+            {%  endif %}
+
+            {%  if find == '0' %}
+                {%  assign lastpost=post %}
+            {%  endif %}
+        {% endfor %}
+
+        {%  if lastpost %}
+            <a href={{lastpost.url}}  style="float:left">上一篇：{{  lastpost.title }}</a>
+        {% endif %}
+
+        {%  if nextpost %}
+            <a href={{nextpost.url}} style="float:right;">下一篇：{{  nextpost.title }}</a>
+        {% endif %}
+        </div>
+
+        <div class="clearfix"></div>
         <hr>
-    </div>
+    </div>   
+
+<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js?uid=1396498463735181" charset="utf-8"></script>
+<!-- JiaThis Button END -->
 
  <!--    <div id="disqus_container">
         <a href="#" class="comment" onclick="return false;">点击查看评论</a>

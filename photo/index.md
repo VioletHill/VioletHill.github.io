@@ -30,13 +30,12 @@ layout: base
 
 <script>
     $(document).ready(function(){
-        
-        $(".photoContainer").imagesLoaded(function(){
-            $(".container-fluid").masonry({
+        var $container=$("#ebay_photo");
+        $container.imagesLoaded(function(){
+            $container.masonry({
                 itemSelector:'.box',
                 isAnimated:true,
             });
-
         });
     })
 </script>
