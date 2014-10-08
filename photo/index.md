@@ -7,19 +7,6 @@ layout: base
 
 <div class="container">
 	<div class="container-fluid" id="ebayPhoto">
-
-        {% for photo in site.categories.ebay_photo %}
-            <div class="photoContainer">
-        	   <a href="{{photo.largeImage}}" class="box span3" data-lightbox="{{photo.album}}" data-title="{{photo.title}}">
-        		  <br>
-        		  <img class="flowImg" src="{{photo.smallImage}}">
-        		  <br>
-        		  <br>
-        	   	   <p style="word-wrap: break-word">{{photo.message}}</p>
-        		  <br>
-        	   </a>  
-            </div>
-        {% endfor %}
     </div>
 </div>
 
@@ -29,13 +16,40 @@ layout: base
  
 
 <script>
+
+    var photo=[];
+
+
+    var indexI=0;
+    var msnry; 
+
     $(document).ready(function(){
-        var $container=$("#ebayPhoto");
-        $(".photoContainer").imagesLoaded(function(){
-            $container.masonry({
-                itemSelector:'.box',
-                isAnimated:true,
-            });
-        });
+
+       // $container.masonry('bindResize');
+        var  container = document.querySelector('#ebayPhoto');
+        msnry = new Masonry( container );
+ 
+        {% for photo in site.categories.ebay_photo %}
+            var photoObj={};
+            photoObj.smallImage='{{ photo.smallImage }}';
+            photoObj.title='{{ photo.title }}';
+            photoObj.album='{{ photo.album }}';
+            photo.push(photoObj);
+        {% endfor %}
+
+
+        loadNext(0);
     })
+
+    function loadNext(index){
+
+        var $imgContainer=$('<a href="'+photo[index].smallImage+'" class="box span3" data-lightbox="'+photo[index].album +'" data-title="' + photo[index].title + '"></a>');
+        $imgContainer.append('<br />');
+        $imgContainer.append('<img class="flowImg" src="'+photo[index].smallImage+'">');
+
+       $imgContainer.imagesLoaded(function(){
+            $('#ebayPhoto').masonry().append( $imgContainer ).masonry( 'appended', $imgContainer );  
+             if (index+1<photo.length) loadNext(index+1); 
+        });
+    }
 </script>
