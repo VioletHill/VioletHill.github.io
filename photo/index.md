@@ -6,21 +6,21 @@ layout: base
 <link rel="stylesheet" href="/css/lightbox.css" type="text/css" />
 
 <div class="container">
-	<div class="container-fluid" id="ebay_photo">
+	<div class="container-fluid" id="ebayPhoto">
 
         {% for photo in site.categories.ebay_photo %}
-        	<a href="{{photo.largeImage}}" class="box span3" data-lightbox="{{photo.album}}" data-title="{{photo.title}}" style="display:none">
-        		<br>
-        		<img class="flowImg" src="{{photo.smallImage}}">
-        		<br>
-        		<br>
-        		<p style="word-wrap: break-word">{{photo.message}}</p>
-        		<br>
-        	</a>  
+            <div class="photoContainer">
+        	   <a href="{{photo.largeImage}}" class="box span3" data-lightbox="{{photo.album}}" data-title="{{photo.title}}">
+        		  <br>
+        		  <img class="flowImg" src="{{photo.smallImage}}">
+        		  <br>
+        		  <br>
+        	   	   <p style="word-wrap: break-word">{{photo.message}}</p>
+        		  <br>
+        	   </a>  
+            </div>
         {% endfor %}
     </div>
-
-    <h3 id="loadingInfo" style="text-align:center">Loading...</h3>
 </div>
 
 <script src="/js/masonry.pkgd.min.js"></script>
@@ -30,12 +30,9 @@ layout: base
 
 <script>
     $(document).ready(function(){
-        var $container=$("#ebay_photo");
-        $container.imagesLoaded(function(){
-
-            $(".box").css({display:"block"});
-            $("#loadingInfo").css({display:"none"});
-            $container.masonry({
+        
+        $(".photoContainer").imagesLoaded(function(){
+            $(".container-fluid").masonry({
                 itemSelector:'.box',
                 isAnimated:true,
             });
