@@ -1,0 +1,194 @@
+body{
+	margin: 0px;
+}
+
+.mainDiv{
+	width: 100%;
+	height:100%;
+	min-height: 319px;
+	min-width: 924px;
+	background-image: url('../images/bg.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin: 0px;
+}
+
+
+.left{
+	min-width: 466px;
+	min-height: 319px;
+}
+
+.right{
+	min-width: 482px;
+	min-height: 359px;
+}
+
+@keyframes moveLeftToRight
+{
+	from {
+		left:-100%;
+	}
+	to {
+		left: 0px;
+	}
+}
+
+@-moz-keyframes moveLeftToRight /* Firefox */
+{
+	from {
+		left:-100%;
+	}
+	to {
+		left: 0px;
+	}
+}
+
+@-webkit-keyframes moveLeftToRight /* Safari 和 Chrome */
+{
+	from {
+		left:-100%;
+	}
+	to {
+		left: 0px;
+	}
+}
+
+@-o-keyframes moveLeftToRight /* Opera */
+{
+	from {
+		left:-100%;
+	}
+	to {
+		left: 0px;
+	}
+}
+
+
+
+#leftContainer{
+	position: relative;
+	animation: moveLeftToRight 0.8s ease-out 2s;
+	/* Firefox: */
+	-moz-animation: moveLeftToRight 0.8s ease-out 2s;
+	/* Safari 和 Chrome: */
+	-webkit-animation: moveLeftToRight 0.8s ease-out 0s ;
+	/* Opera: */
+	-o-animation: moveLeftToRight 0.8s ease-out 2s;
+}
+
+
+@keyframes moveRightToLeft
+{
+	from {
+		left:100%;
+	}
+	to {
+		left: 0px;
+	}
+}
+
+
+@-moz-keyframes moveRightToLeft /* Firefox */
+{
+	from {
+		left:100%;
+	}
+	to {
+		left: 0px;
+	}
+}
+
+@-webkit-keyframes moveRightToLeft /* Safari 和 Chrome */
+{
+	from {
+		left:100%;
+	}
+	to {
+		left: 0px;
+	}
+}
+
+@-o-keyframes moveRightToLeft /* Opera */
+{
+	from {
+		left:100%;
+	}
+	to {
+		left: 0px;
+	}
+}
+
+
+#rightContainer{
+	position: relative;
+	animation: moveRightToLeft 0.8s ease-out 2s;
+	/* Firefox: */
+	-moz-animation: moveRightToLeft 0.8 sease-out 2s;
+	/* Safari 和 Chrome: */
+	-webkit-animation: moveRightToLeft 0.8s ease-out 0s ;
+	/* Opera: */
+	-o-animation: moveRightToLeft 0.8s ease-out 2s;
+}
+
+
+@keyframes showHint 
+{
+	from {
+		opacity: 0;
+		transform:rotate(180deg); 
+	}
+	to {
+		opacity: 1;
+		transform:rotate(0deg);
+	}
+}
+
+@-webkit-keyframes showHint /* Safari 和 Chrome */
+{
+	from {
+		opacity: 0;
+		-webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+	}
+	to {
+		opacity: 1;
+		-webkit-transform:rotate(0deg);
+	}
+}
+
+
+@-moz-keyframes showHint /* Firefox */
+{
+	from {
+		opacity: 0;
+		-moz-transform:rotate(180deg); /* Firefox */
+	}
+	to {
+		opacity: 1;
+		-moz-transform:rotate(0deg);
+	}
+}
+
+@-o-keyframes showHint /* Opera */
+{
+	from {
+		opacity: 0;
+		-o-transform:rotate(180deg);
+	}
+	to {
+		opacity: 1;
+		-o-transform:rotate(0deg);
+	}
+}
+
+
+#hintImg{
+	opacity: 0;
+	animation: showHint 0.8s ease-out 0.8s forwards;
+	-moz-animation: showHint 0.8s ease-out 0.8s forwards;
+	/* Safari 和 Chrome: */
+	-webkit-animation: showHint 0.8s ease-in-out 0.8s forwards; /* forwards 保留最后状态 */
+	/* Opera: */
+	-o-animation: showHint 0.8s ease-out 0.8s forwards;
+}
+
