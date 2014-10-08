@@ -34,7 +34,7 @@ layout: base
             photoObj.smallImage='{{ photo.smallImage }}';
             photoObj.title='{{ photo.title }}';
             photoObj.album='{{ photo.album }}';
-            photoObj.largeImage=' {{photo.smallImage }} ' ;
+            photoObj.largeImage=' {{photo.largeImage }} ' ;
             photoObj.message=' {{ photo.message }} ';
             photo.push(photoObj);
         {% endfor %}
