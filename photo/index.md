@@ -30,8 +30,8 @@ layout: base
 
 <script>
     $(document).ready(function(){
-        var $container=$("#ebay_photo");
-        $container.imagesLoaded(function(){
+        var $container=$("#ebayPhoto");
+        $(".photoContainer").imagesLoaded(function(){
             $container.masonry({
                 itemSelector:'.box',
                 isAnimated:true,
