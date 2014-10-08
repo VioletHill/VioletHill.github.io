@@ -55,7 +55,8 @@ layout: base
         $imgContainer.append('<br />');
        $imgContainer.imagesLoaded(function(){
             $('#ebayPhoto').masonry().append( $imgContainer ).masonry( 'appended', $imgContainer );  
-             if (index+1<photo.length) loadNext(index+1); 
+            
         });
+        if (index+1<photo.length) loadNext(index+1); 
     }
 </script>
