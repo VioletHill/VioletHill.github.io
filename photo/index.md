@@ -35,6 +35,7 @@ layout: base
             photoObj.title='{{ photo.title }}';
             photoObj.album='{{ photo.album }}';
             photoObj.largeImg=' {{photo.largeImg }} ' ;
+            photoObj.message=' {{ photo.message }} ';
             photo.push(photoObj);
         {% endfor %}
 
@@ -47,7 +48,11 @@ layout: base
         var $imgContainer=$('<a href="'+photo[index].largeImage+'" class="box span3" data-lightbox="'+photo[index].album +'" data-title="' + photo[index].title + '"></a>');
         $imgContainer.append('<br />');
         $imgContainer.append('<img class="flowImg" src="'+photo[index].smallImage+'">');
-
+        $imgContainer.append('<br />');
+        $imgContainer.append('<br />');
+        $p='<p style="word-wrap: break-word">'+photo[index].message+'</p>';
+        $imgContainer.append($p);
+        $imgContainer.append('<br />');
        $imgContainer.imagesLoaded(function(){
             $('#ebayPhoto').masonry().append( $imgContainer ).masonry( 'appended', $imgContainer );  
              if (index+1<photo.length) loadNext(index+1); 
