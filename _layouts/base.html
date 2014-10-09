@@ -18,16 +18,15 @@
 
     <script>
         $(document).ready(function(){
-
-          if(window.localStorage){
-            var isIe = /msie/.test(navigator.userAgent.toLowerCase());
-            if (isIe==true && window.localStorage.ieSupposed){
-              window.localStorage.ieSupposed="true";
-              $("#ieWarning").modal();
-            } 
-
-          }
-
+            $("#searchBar").keydown(function(event){
+               var key=$("#searchBar").find("input").val();
+               if (event.keyCode == 13) {
+                  key=$.trim(key);
+                  if (key!=""){
+                    window.location.href="https://www.google.com.hk/?gws_rd=ssl#safe=strict&q=site:qiufeng.me+"+key;
+                  }
+               }
+            });
         });
     </script>
 
@@ -141,7 +140,9 @@
                             <li id="aboutNav"><a href="/about">About</a></li>
                             <li id="photoNav"><a href="/photo">Photo</a></li>
                             <li id="graffitoNav"><a href="/graffito">Graffito</a></li>
+                            <li style="text-align:center" id="searchBar"><input type="text" class="search-query span2" placeholder="Search" value=""></li>
                         </ul>
+
                     </div>
                 </div>
             </div><!-- /.navbar -->

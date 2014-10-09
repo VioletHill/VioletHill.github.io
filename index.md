@@ -34,6 +34,7 @@ layout: base
 <script>
 
 function watchTheVideo(){
+
     $(".videoHide").fadeOut("medium",function(){
         $(".homeVideoDiv").fadeIn("medium",function(){
             var video=document.getElementById("homeVideo");

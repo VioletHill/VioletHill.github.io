@@ -6,7 +6,7 @@ window.onload = function(){
  
 
     $("#quote").html("");
-    $("#pen").append(pen);
+    $(".videoHide").append(pen);
 
     for (var i=0; i<vLetter.length; i++) {
         var span='<span style="opacity:0">'+vLetter[i]+'</span>';
@@ -37,7 +37,7 @@ window.onload = function(){
         });
         
         // next step
-        setTimeout(doStep, 70);
+        setTimeout(doStep, 50);
     }
 
     var writeEnd=function() {
