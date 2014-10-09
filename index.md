@@ -3,17 +3,19 @@ layout: base
 ---
 
 <link rel="stylesheet" href="/css/home.css" type="text/css">
+<script src="/js/write.js"></script>
+
 
 <div class="container">
 
     <div class="jumbotron videoHide">
-        <h2>DESIGN. CODE. BUILD. INNOVATE</h2>
+        <h2 id="hint">DESIGN. CODE. BUILD. INNOVATE</h2>
 
-        <a class="btn btn-large btn-success" href="javascript:watchTheVideo()" style="margin-top:60px">Watch The Film</a>
+        <a id="watchBtn" class="btn btn-large btn-success" href="javascript:watchTheVideo()" style="margin-top:60px">Watch The Film</a>
 
-        <p class="lead" style="margin-top:60px">
-            <em style="margin-right:2%">"We are what we repeatedly do. Excellence, then, is not an act, but a habit."</em>
-            - Aristotle
+        <p class="lead" style="margin-top:60px;" id="leadQuote">
+            <em  id="quote" style="margin-right:2%"></em>
+            <span id="quoteAuthor" style="opacity:0">- Aristotle</span>
         </p>
     </div>
 
@@ -23,6 +25,8 @@ layout: base
             <video id="homeVideo" src="media/wwdc_start.mov" style="width:90%; max-width:900px" controls="controls" onended="videoEnd()"></video>
         </div>
     </div>
+
+    <div id="pen"></div>
 </div>
     
 <!--  java script code -->
