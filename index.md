@@ -25,8 +25,6 @@ layout: base
             <video id="homeVideo" src="media/wwdc_start.mov" style="width:90%; max-width:900px" controls="controls" onended="videoEnd()"></video>
         </div>
     </div>
-
-    <div id="pen"></div>
 </div>
     
 <!--  java script code -->

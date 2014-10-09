@@ -25,7 +25,7 @@ window.onload = function(){
         }
 
         var offset=$(childrens[letterIndex]).offset();
-        console.log($(pen));
+
         $("#penImg").css({
             display:"block",
             top:offset.top+10+"px",
