@@ -3,7 +3,7 @@ layout: base
 ---
 
 <link rel="stylesheet" href="/css/home.css" type="text/css">
-<script src="/js/write.js"></script>
+<script src="/js/home.js"></script>
 
 
 <div class="container">
