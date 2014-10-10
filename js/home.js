@@ -45,7 +45,7 @@ window.onload = function(){
         $("#quoteAuthor").delay(500).animate({opacity:1},"3000") ;
     }
 
-    setTimeout(doStep, 1500);
+    setTimeout(doStep, 300);
 
 
 };
