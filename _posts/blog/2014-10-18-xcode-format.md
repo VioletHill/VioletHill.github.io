@@ -10,7 +10,7 @@ description: 利用Clang-Format自动格式化xcode代码——构建和苹果�
 		<br>
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们从安装开始(如果你已经安装了ClangFormat，可以跳过这一段),首先去<a href="https://github.com/travisjeffery/ClangFormat-Xcode">Github</a>下载插件，下载完毕后会是一个Project，只要正常的运行一次，xcode出现Build Successed以后，说明安装成功，这时候，需要重启xocde，注意 要彻底退出xocde。接下来你可以在xcode的菜单栏找到Edit一列多出了一个Clang Format(应该在最下面)，然后 你可以选择对应的WebKit风格的代码了，(这个在我看来已经很perfect)。
 		<br>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;接下来，我们说一下如何格式化出和苹果一样的代码风格，Clang Format支持之定义格式，这时候，你需要做的就是复制下面一段代码，然后保存为一个名字叫做".clang-format"的文件，主要不要忘记“.”，当然，你也可以从我<a href="">这里</a>直接下载
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;接下来，我们说一下如何格式化出和苹果一样的代码风格，Clang Format支持之定义格式，这时候，你需要做的就是复制下面一段代码，然后保存为一个名字叫做".clang-format"的文件，主要不要忘记“.”，当然，你也可以从我<a href="http://pan.baidu.com/s/1mgp5YzQ">这里</a>直接下载,不过 因为权限的原因，我无法上传“.”开头的文件，所以下载完后，你需要重命名成".clang-format"
 		<pre>---
 Language:        Cpp
 # BasedOnStyle:  LLVM
