@@ -43,7 +43,7 @@ description: 这是接着上一篇的内容 完成最后的扫一扫部分
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果你有自己稳定的服务器 那我推荐 你还是弄到自己的服务器上吧！然后写点PHP 或者 Ruby 的代码 把 'Content-Type' 改为 'application/vnd.apple.pkpass'就可以了。那么 下面的文字你也就可以跳过了
 
     <br />
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好了，接下来的工作 就是去heroku注册一个账号 然后创建一个 Ruby 的项目(如果你熟悉后端语言 比如PHP啊、Python啊 什么七七八八的 可以自己去完成),然后 按照<a herf="https://devcenter.heroku.com/articles/getting-started-with-ruby#introduction">heroku的教程</a> 把环境部署好, 注意只需要完成到 Deploy the app, 然后 能够在本地创建自己的文件夹就可以了.
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好了，接下来的工作 就是去heroku注册一个账号 然后创建一个 Ruby 的项目(如果你熟悉后端语言 比如PHP啊、Python啊 什么七七八八的 可以自己去完成),然后 按照<a herf="https://devcenter.heroku.com/articles/getting-started-with-ruby">heroku的教程</a> 把环境部署好, 注意只需要完成到 Deploy the app, 然后 能够在本地创建自己的文件夹就可以了.
     <br />
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;接下来 我们会使用Ruby的一个框架<a href="https://github.com/sinatra/sinatra">sinatra</a>请不要被吓倒，sinatra很简单 可以去看看github的教程 3行代码跑出一个网页 并且可以不需要你任何基础 如果需要本地环境 也可以按照github的教程搭建一个
 
