@@ -33,7 +33,7 @@ layout: base
         {% for post in site.categories.blog %}
 
             {%  if find == '1' %}
-                {%  assign nextpost=post   %}
+                {%  assign lastpost=post   %}
                 {%  break %}
             {%  endif %}
 
@@ -42,7 +42,7 @@ layout: base
             {%  endif %}
 
             {%  if find == '0' %}
-                {%  assign lastpost=post %}
+                {%  assign nextpost=post %}
             {%  endif %}
         {% endfor %}
 
