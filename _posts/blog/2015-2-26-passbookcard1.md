@@ -1,4 +1,4 @@
----
+certificateauthority---
 layout: post
 title: 	用Passbook制作自己的名片 1
 category: blog
@@ -239,7 +239,7 @@ description: 这是一件非常有趣的事情，用Passbook制作自己的名�
             <img src="/images/blog/passbookcard1/wwdr1.png" />
         </div>
         <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果万一你没有这个证书， 那么打开你的浏览器， 访问这个页面 http://www.apple.com/certificateauthority/。在这里你可以下载你可能需要的最重要的苹果证书。 翻到下面，找到 WWDR 证书， 下载 .cer 文件， 并导入到钥匙串中。
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果万一你没有这个证书， 那么打开你的浏览器， 访问这个页面<a href="http://www.apple.com/certificateauthority/"> http://www.apple.com/certificateauthority/ </a>。在这里你可以下载你可能需要的最重要的苹果证书。 翻到下面，找到 WWDR 证书， 下载 .cer 文件， 并导入到钥匙串中。
         <br />
         <br />
 
