@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 	用Passbook制作自己的名片
+title: 	用Passbook制作自己的名片 1
 category: blog
 description: 这是一件非常有趣的事情，用Passbook制作自己的名片好好的装一次逼吧！
 ---
