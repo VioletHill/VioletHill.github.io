@@ -1,4 +1,4 @@
-certificateauthority---
+---
 layout: post
 title: 	用Passbook制作自己的名片 1
 category: blog
