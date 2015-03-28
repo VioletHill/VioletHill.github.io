@@ -68,14 +68,14 @@ layout: base
 
  		<script>
  			$("#androidProject").ready(function(){
- 				var spans=$("#iosProject").find(".span4");
+ 				var spans=$("#androidProject").find(".span4");
  				for (var i=0; i<=Math.floor(spans.length/3); i++){
  					if (i==0){
-						$("#iosProject").find(".span4:lt(3)").wrapAll('<div class="row-fluid flowItem"></div>');
+						$("#androidProject").find(".span4:lt(3)").wrapAll('<div class="row-fluid flowItem"></div>');
  					}
  					else{
  						var selectG="gt("+(i*3-1)+")";
-  						$("#iosProject").find(".span4:"+selectG+":lt(3)").wrapAll('<div class="row-fluid flowItem"></div>');
+  						$("#androidProject").find(".span4:"+selectG+":lt(3)").wrapAll('<div class="row-fluid flowItem"></div>');
  					}
  					
  				}
