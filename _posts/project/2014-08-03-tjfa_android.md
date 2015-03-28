@@ -10,5 +10,4 @@ publishDate: 2015年03月20日
 size: 7.98 MB
 copyright: © 同济大学足球协会
 require: Android 4.0 以上
-
 ---
