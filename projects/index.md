@@ -44,8 +44,8 @@ layout: base
 	</div>	
 
 
-		<div class="container-fluid">
-		<div id="iosProject">
+	<div class="container-fluid">
+		<div id="androidProject">
 			<h2>Android</h2>
 				{% for project in site.categories.android_projects %}
              	<div class="span4">
@@ -67,7 +67,7 @@ layout: base
  		</div>
 
  		<script>
- 			$("#iosProject").ready(function(){
+ 			$("#androidProject").ready(function(){
  				var spans=$("#iosProject").find(".span4");
  				for (var i=0; i<=Math.floor(spans.length/3); i++){
  					if (i==0){
