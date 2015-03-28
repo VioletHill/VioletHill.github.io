@@ -42,6 +42,47 @@ layout: base
  			});
  		</script>
 	</div>	
+
+
+		<div class="container-fluid">
+		<div id="iosProject">
+			<h2>Android</h2>
+				{% for project in site.categories.android_projects %}
+             	<div class="span4">
+            		<a href="http://www.wandoujia.com/apps/me.qiufeng.www"><h3>{{ project.title }}</h3></a>
+					<img src="{{project.image}}" class="projectIcon" />
+					<br>
+					<br>
+					<p>
+						<span class="projectItemTitle">{{project.cost}}</span><br>
+						<span class="projectItemTitle">类别</span>:<span class="projectItemInfo"> {{project.type}}</span><br>
+						<span class="projectItemTitle">{{project.publish}}</span>:<span class="projectItemInfo"> {{project.publishDate}}</span><br>
+						<span class="projectItemTitle">版本</span>:<span class="projectItemInfo"> {{project.version}}</span><br>
+						<span class="projectItemTitle">大小</span>:<span class="projectItemInfo"> {{project.size}}</span><br>
+						<span class="projectItemTitle">版权</span>:<span class="projectItemInfo">{{project.copyright}}</span><br>
+						<span class="projectItemTitle">兼容</span>:<span class="projectItemInfo"> {{project.require}}</span> <br>
+					</p>
+           	 	</div>
+        	{% endfor %}
+ 		</div>
+
+ 		<script>
+ 			$("#iosProject").ready(function(){
+ 				var spans=$("#iosProject").find(".span4");
+ 				for (var i=0; i<=Math.floor(spans.length/3); i++){
+ 					if (i==0){
+						$("#iosProject").find(".span4:lt(3)").wrapAll('<div class="row-fluid flowItem"></div>');
+ 					}
+ 					else{
+ 						var selectG="gt("+(i*3-1)+")";
+  						$("#iosProject").find(".span4:"+selectG+":lt(3)").wrapAll('<div class="row-fluid flowItem"></div>');
+ 					}
+ 					
+ 				}
+ 			});
+ 		</script>
+	</div>	
+
 		<hr>
 		<h2>Web</h2>
 		<div class="container-fluid">
