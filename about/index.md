@@ -107,17 +107,27 @@ layout: base
 
 		<div id="timeline">
 			<ul id="dates">
-				<li><a href="#time2012">2014</a></li>
+        		<li><a href="#time2015">2015</a></li>
+				<li><a href="#time2014">2014</a></li>
 				<li><a href="#time2013">2013</a></li>
-				<li><a href="#time2014">2012</a></li>
+				<li><a href="#time2012">2012</a></li>
 			</ul>
 			<ul id="issues">
+        
+				<li id="time2015">
+					<div>
+						<p><span class="title">Jan.</span><span class="info">Intern at liulishuo.com</span></p>
+						<p><span class="title">Apr.</span><span class="info">Winner of Apple WWDC 2015 Scholarship</span></p>
+					</div>
+				</li>
+
+        
 				<li id="time2014">
 					<div>
 						<p><span class="title">Jan.</span><span class="info">Science And Technology Scholarship Of Tongji University</span></p>
-						<p><span class="title">Feb.</span><span class="info">Volunteer Of  FTC</span></p>
-						<p><span class="title">Apr.</span><span class="info">Intern Of eBay</span></p>
-						<p><span class="title">Sep.</span><span class="info">Intern Of baixing.com</span></p>
+						<p><span class="title">Feb.</span><span class="info">Volunteer of FTC</span></p>
+						<p><span class="title">Apr.</span><span class="info">Intern at eBay</span></p>
+						<p><span class="title">Sep.</span><span class="info">Intern at baixing.com</span></p>
 					</div>
 				</li>
 				
@@ -131,7 +141,7 @@ layout: base
 						<p><span class="title">Nov.</span><span class="info">Volunteer Of SAP Future IT Leader Summit 2013</span></p>
 					</div>
 				</li>
-				<li id="time2011">
+				<li id="time2012">
 					<div>
 						<p><span class="title">Apr.</span><span class="info">Second Prize Of "Programming Contest" In Tongji University</span></p>
 						<p><span class="title">Sep.</span><span class="info">Assistant Of "C Language" Course</span></p>
