@@ -38,7 +38,7 @@ layout: base
 			<span class="title">Learning</span>			
 			<span class="barContainer">
 				<div class="progress progress-striped active" style="margin-bottom:0">
-  					<div class="bar" style="width: 10%; background-color:#ff7f0e">
+  					<div class="bar" style="width: 90%; background-color:#ff7f0e">
   						<div class="info barInfo">Swift</div>
   					</div>
 				</div>
