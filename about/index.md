@@ -124,7 +124,7 @@ layout: base
         
 				<li id="time2014">
 					<div>
-						<p><span class="title">Jan.</span><span class="info">Science And Technology Scholarship Of Tongji University</span></p>
+						<p><span class="title">Jan.</span><span class="info">Science and Technology Scholarship of Tongji University</span></p>
 						<p><span class="title">Feb.</span><span class="info">Volunteer of FTC</span></p>
 						<p><span class="title">Apr.</span><span class="info">Intern at eBay</span></p>
 						<p><span class="title">Sep.</span><span class="info">Intern at baixing.com</span></p>
@@ -134,20 +134,19 @@ layout: base
 				<li id="time2013">
 					<div>
 						<p><span class="title">Apr.</span><span class="info">Second Prize Of "Programming Contest" In Tongji University</span></p>
-						<p><span class="title">May.</span><span class="info">Volunteer Of "Challenge Cup"</span></p>
-						<p><span class="title">Sep.</span><span class="info">Assistant Of "Java Language" Course</span></p>
-						<p><span class="title">Sep.</span><span class="info">Chairman Of Tongji Football Association</span></p>
-						<p><span class="title">Oct.</span><span class="info">Training Of "Start Your Road At SAP"</span></p>
-						<p><span class="title">Nov.</span><span class="info">Volunteer Of SAP Future IT Leader Summit 2013</span></p>
+						<p><span class="title">May.</span><span class="info">Volunteer of "Challenge Cup"</span></p>
+						<p><span class="title">Sep.</span><span class="info">Assistant of "Java Language" Course</span></p>
+						<p><span class="title">Sep.</span><span class="info">Chairman of Tongji Football Association</span></p>
+						<p><span class="title">Oct.</span><span class="info">Training of "Start Your Road At SAP"</span></p>
+						<p><span class="title">Nov.</span><span class="info">Volunteer of SAP Future IT Leader Summit 2013</span></p>
 					</div>
 				</li>
 				<li id="time2012">
 					<div>
-						<p><span class="title">Apr.</span><span class="info">Second Prize Of "Programming Contest" In Tongji University</span></p>
-						<p><span class="title">Sep.</span><span class="info">Assistant Of "C Language" Course</span></p>
-						<p><span class="title">Sep.</span><span class="info">Became A Member Of "Tongji Apple Club"</span></p>
-						<p><span class="title">Nov.</span><span class="info">Volunteer Of "Challenge Cup"</span></p>
-						<p><span class="title">Dec.</span><span class="info">Silver Prize Of "IBM Master the Mainframe Contest China"</span></p>
+						<p><span class="title">Apr.</span><span class="info">Second Prize of "Programming Contest" In Tongji University</span></p>
+						<p><span class="title">Sep.</span><span class="info">Assistant of "C Language" Course</span></p>
+						<p><span class="title">Nov.</span><span class="info">Volunteer of "Challenge Cup"</span></p>
+						<p><span class="title">Dec.</span><span class="info">Silver Prize of "IBM Master the Mainframe Contest China"</span></p>
 					</div>
 				</li>
 			</ul>
