@@ -1,12 +1,12 @@
 ---
 layout: post
-title: 	用Passbook制作自己的名片 1
+title: 	用 Passbook 制作自己的名片 1
 category: blog
-description: 这是一件非常有趣的事情，用Passbook制作自己的名片好好的装一次逼吧！
+description: 这是一件非常有趣的事情，用 Passbook 制作自己的名片好好的装一次逼吧！
 ---
 <div class="container">
 	<p>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Passbook是iOS6引入的一种简化电子票卷的东西，但其实在感觉在中国一直没有推广好，当然 你可以拿来做特殊的用途 比如你的名片 哈哈！你可以按照下面的教程 完成属于自己的Passbook名片.这样 别人要你的名片的时候只要让他打开Passbook扫一扫就好啦.当然 如果你问我这和微信有什么区别的话 我只能说 逼格高(微信太low啦)，人活着就是为了逼格！ 好了，让我们先看看制作的效果图 然后 根据下面的教程一步一步走 你也可以制作自己的passbook名片了
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Passbook 是 iOS 6 引入的一种简化电子票卷的东西，但其实在感觉在中国一直没有推广好，当然 你可以拿来做特殊的用途 比如你的名片 哈哈！你可以按照下面的教程 完成属于自己的 Passbook 名片.这样 别人要你的名片的时候只要让他打开 Passbook 扫一扫就好啦.当然 如果你问我这和微信有什么区别的话 我只能说 逼格高(微信太 low 啦)，人活着就是为了逼格！ 好了，让我们先看看制作的效果图 然后 根据下面的教程一步一步走 你也可以制作自己的 Passbook 名片了
     </p>
 
     <br />
@@ -17,7 +17,7 @@ description: 这是一件非常有趣的事情，用Passbook制作自己的名�
     <br />
 
     <p>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首先，我们对passbook开发做一个大致的了解，passbook可以不需要任何的app接入，换句话说 你可以不写一行代码,就能利用passbook制作自己的文件，但是 你需要一个开发者账号。passbook识别一个.pkpass 后缀的文件，而.pkpass本质就是一个zip文件，文件包含了以下内容(不同的pkpass可能包含的东西不一样):
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首先，我们对 Passbook 开发做一个大致的了解，Passbook 可以不需要任何的 App 接入，换句话说 你可以不写一行代码,就能利用 Passbook 制作自己的文件，但是 你需要一个开发者账号。Passbook 识别一个 .pkpass 后缀的文件，而 .pkpass 本质就是一个 zip 文件，文件包含了以下内容(不同的 pkpass 可能包含的东西不一样):
         <ul>
             <li>pass.json – 关于这个 pass 的信息区域的描述，他们的内容， 和元信息。</li>
             <li>manifest.json – 这个文件描述了这个 pass 中的文件列表， 和每个文件的 SHA1 校验和。</li>
@@ -107,12 +107,12 @@ description: 这是一件非常有趣的事情，用Passbook制作自己的名�
             <ul>
                 <li>formatVersion： 文件格式的版本，因为这是一个全新的文件格式， 你用的是 1(注意，1 是一个数字；如果你用字符串来表示这个值的话，这个文件就会是无效的，并且 苹果官网规定这个数字只能为1)</li>
                 <li>passTypeIdentifier – 这是 Pass 的标识。 这个和 iOS 中的 bundle identifier 差不多。 稍后会更多的介绍关于这个标识的内容。</li>
-                <li>serialNumber – 这个是 pass 的序列号，就像数据库中的主键一样 根据你的passTypeIdentifier和teamIdentifier唯一的passbook文件，如果两个serialNumber相同，并且在同一个passTypeIdentifier下面，那么会覆盖掉之前的文件，有点类似你的身份证号码</li>
+                <li>serialNumber – 这个是 pass 的序列号，就像数据库中的主键一样 根据你的 passTypeIdentifier 和 teamIdentifier 唯一的 Passbook 文件，如果两个 serialNumber 相同，并且在同一个 passTypeIdentifier 下面，那么会覆盖掉之前的文件，有点类似你的身份证号码</li>
                 <li>teamIdentifier – 这是苹果分配和每个 iOS 开发者的一个唯一的十个字符的标识。 如果你创建过你自己的 iOS 应用，你应该已经熟悉它了。在你完成所有证书的创建以后 我会告诉你如何找到这一个标示</li>
                 <li>organizationName – 你的组织名称。可以随笔写</li>
                 <li>description – 关于 pass 一个简短的介绍。也可以随笔啊写</li>
             </ul>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;剩下的一些字段 大家可以对照我的效果图对比 看一看每个字段对应的意思是什么 其中的 label是显示在passbook上面的文字 key是你自己定义的关键字 value是对应passbook中对应label中显示的字
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;剩下的一些字段 大家可以对照我的效果图对比 看一看每个字段对应的意思是什么 其中的 label 是显示在 Passbook 上面的文字 key是你自己定义的关键字 value 是对应 Passbook 中对应 label 中显示的字
         <br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;接下去的工作比较辛苦，我们需要配置各种证书，我们需要进入<a href="https://developer.apple.com/membercenter/index.action">iOS Developer Portal</a>, 在你登录进去之后，在Certificates, Identifiers & Profiles，选择 Identifiers，然后选择 Pass Type IDs 
         
@@ -135,7 +135,7 @@ description: 这是一件非常有趣的事情，用Passbook制作自己的名�
 
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这里Identifier苹果推荐使用倒域名来注册 比如 我的 pass.me.qiufeng.mypassbookcard
         <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注册完成之后 我们需要为passbook导入证书，同样在Pass Type IDs这一栏中选中你刚刚注册的passbook，然后点击edit,之后点击create certiicate
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注册完成之后 我们需要为 Passbook 导入证书，同样在 Pass Type IDs 这一栏中选中你刚刚注册的 Passbook，然后点击 edit,之后点击 Create Certiicate
         <br />
         <br />
 
@@ -158,7 +158,7 @@ description: 这是一件非常有趣的事情，用Passbook制作自己的名�
             <img src="/images/blog/passbookcard1/register3.png" />
         </div>
         <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这里介绍了如何生成CSR文件 如果你没有 那么按照这里介绍的 生成一个到你的本地，之后点击Continue
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这里介绍了如何生成 CSR 文件 如果你没有 那么按照这里介绍的 生成一个到你的本地，之后点击Continue
         <br />
         <br />
 
@@ -166,7 +166,7 @@ description: 这是一件非常有趣的事情，用Passbook制作自己的名�
             <img src="/images/blog/passbookcard1/register4.png" />
         </div>
         <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这里点击choose file选择你刚刚的csr文件 一般名字是这个 CertificateSigningRequest.certSigningRequest，点击generate
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这里点击 Choose File 选择你刚刚的 CSR 文件 一般名字是这个 CertificateSigningRequest.certSigningRequest，点击 Generate
         <br />
         <br />
 
@@ -174,8 +174,8 @@ description: 这是一件非常有趣的事情，用Passbook制作自己的名�
             <img src="/images/blog/passbookcard1/register5.png" />
         </div>
         <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;生成完证书后，我们点击Download,然后双击，这样 证书就被加入到了你的钥匙串中
-        <br>然后打开钥匙串，然后找到你的证书，右键 Get Info 找到那里有一个Organizational Unit的标识 那个就是你需要填入到teamIdentifier对应的value的字段，请确保你找到正确的证书
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;生成完证书后，我们点击 Download,然后双击，这样 证书就被加入到了你的钥匙串中
+        <br>然后打开钥匙串，然后找到你的证书，右键 Get Info 找到那里有一个 Organizational Unit 的标识 那个就是你需要填入到  teamIdentifier对应的 value 的字段，请确保你找到正确的证书
         <br />
         <br />
 
@@ -189,26 +189,26 @@ description: 这是一件非常有趣的事情，用Passbook制作自己的名�
             <img src="/images/blog/passbookcard1/info2.png" />
         </div>
         <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;到这里 我们已经完成了pass.json的所有内容，剩下最后一个文件需要准备了，再次用sublime新建一个文件，命名为manifest.json,里面的内容如下：
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;到这里 我们已经完成了 pass.json 的所有内容，剩下最后一个文件需要准备了，再次用 Sublime 新建一个文件，命名为 manifest.json, 里面的内容如下：
         <pre name="code" class="plain">{
     &quot;icon@2x.png&quot;: &quot;b793b73c7921be3448f8df77fbca7843c8d6d68e&quot;,
     &quot;thumbnail@2x.png&quot;: &quot;b793b73c7921be3448f8df77fbca7843c8d6d68e&quot;,
     &quot;pass.json&quot;: &quot;74974e196dbcbb8bd566542cc5ad01e1cff814ca&quot;
 }   </pre>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这里需要注意的是 后面一大串加密的东西 你和我的都不一样，这里采用的是 SHA1 算法（不要担心，不需要你对这种算法有任何的了解），打开 终端，然后cd到文件目录下面，
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这里需要注意的是 后面一大串加密的东西 你和我的都不一样，这里采用的是 SHA1 算法（不要担心，不需要你对这种算法有任何的了解），打开 终端，然后 cd 到文件目录下面，
 依次输入如下命令
    <pre name="code" class="plain">openssl sha1 pass.json</pre>
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;命令行的输出看起来是这样(实际的校验和可能会不同)：
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SHA1(pass.json)= 74974e196dbcbb8bd566542cc5ad01e1cff814ca
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;然后把 74974e196dbcbb8bd566542cc5ad01e1cff814ca 复制到pass.json对应的值中。
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;同样的方法 对icon@2x.png 和 thubnail@2x.png也进行加密，需要注意的地方：如果你对pass.json做出了修改，那么对应的加密就会变了，你就需要重新生成那个pass.json对应的值，比如 我在pass.json的最后多敲了一个回车或者空格，那么我就需要重新输入openssl sha1 pass.json，得到新的加密 然后把新的加密放到manifest.json里面。
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 然后把 74974e196dbcbb8bd566542cc5ad01e1cff814ca 复制到 pass.json 对应的值中。
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;同样的方法 对 icon@2x.png 和 thubnail@2x.png也进行加密，需要注意的地方：如果你对 pass.json 做出了修改，那么对应的加密就会变了，你就需要重新生成那个 pass.json 对应的值，比如 我在 pass.json 的最后多敲了一个回车或者空格，那么我就需要重新输入 openssl sha1 pass.json，得到新的加密 然后把新的加密放到 manifest.json 里面。
     </p>
     <br>
 
     <p>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;接下来 我们需要制作苹果的证书了
         <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;还记得刚刚查看teamIdentifier对应那个字段的证书吗？我们需要再次利用他了， 现在你将会把这个证书和秘钥导出成 PEM 格式， 这样你可以把它们用于 OpenSSL。
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;还记得刚刚查看 teamIdentifier 对应那个字段的证书吗？我们需要再次利用他了， 现在你将会把这个证书和秘钥导出成 PEM 格式， 这样你可以把它们用于 OpenSSL。
         <br>
 
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;打开钥匙串访问， 在左边的菜单中选择证书(在类型下面)，再次找到刚刚的那个 “Pass Type ID: pass.me.qiufeng.mypassbookcard” 的证书。（也就是重新找到那个证书）
@@ -284,8 +284,8 @@ description: 这是一件非常有趣的事情，用Passbook制作自己的名�
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这时候 通过 这个console 我们可以找到这么一行log
         <pre name="code" class="plain">iPhone sharingd[55] &lt;Warning&gt;: Invalid data error reading pass /var/mobile/Library/Caches/com.apple.sharingd/com.apple.Passbook/96050960-3BE4-41AE-A306-C328B4B81248.pkpass/pass.json. Invalid json from URL file:///var/mobile/Library/Caches/com.apple.sharingd/com.apple.Passbook/96050960-3BE4-41AE-A306-C328B4B81248.pkpass/pass.json: Error Domain=NSCocoaErrorDomain Code=3840 &quot;The operation couldn’t be completed. (Cocoa error 3840.)&quot; (Badly formed object around character 29.) UserInfo=0x13f02fa70 {NSDebugDescription=Badly formed object around character 29.}</pre>
 <br />
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;大致能知道错误的原因，包括sha1加密也是可以检验的.这时候 你再根据这个错误去修改 修改完成后 请别忘记 如果你修改了pass.json文件 那么对应的manifest.json的加密也会改变的哦
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;大致能知道错误的原因，包括 sha1 加密也是可以检验的.这时候 你再根据这个错误去修改 修改完成后 请别忘记 如果你修改了 pass.json 文件 那么对应的 manifest.json 的加密也会改变的哦
      <br>
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好了 到目前为止，我们完成了除去扫一扫添加以外的所有功能，如果你一步一步有耐心的顺利完成了上面的工作，那么恭喜你～ 一起期待下一节的 为你的passbook名片添加“扫一扫添加”的功能，如果你没有耐心了，并且还出现了错误～～那么休息休息～～根据上面查错误的方法 重新找到错误 然后再接再厉喽～～
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好了 到目前为止，我们完成了除去扫一扫添加以外的所有功能，如果你一步一步有耐心的顺利完成了上面的工作，那么恭喜你～ 一起期待下一节的 为你的 Passbook 名片添加“扫一扫添加”的功能，如果你没有耐心了，并且还出现了错误～～那么休息休息～～根据上面查错误的方法 重新找到错误 然后再接再厉喽～～
     </p>
 </div>
