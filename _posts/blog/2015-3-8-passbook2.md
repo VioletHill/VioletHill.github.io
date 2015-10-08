@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 	用Passbook制作自己的名片 2
+title: 	用 Passbook 制作自己的名片 2
 category: blog
 description: 这是接着上一篇的内容 完成最后的扫一扫部分
 ---
