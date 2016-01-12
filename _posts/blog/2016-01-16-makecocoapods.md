@@ -41,9 +41,10 @@ description: 在 GitHub 中制作一个自己的 CocoaPods
 
 
 这里需要注意的几点:
-* license 是必须的
-* s.source_files 显示你的的 pods 中包含了哪些文件
-* platform 中显示了仅仅支持 iOS
+
+*	license 是必须的
+*	s.source_files 显示你的的 pods 中包含了哪些文件
+* 	platform 中显示了仅仅支持 iOS
 
 具体的 license 中内容可以参见[这里](https://github.com/VioletHill/QIULaunchAnimation/blob/master/LICENSE)
 
