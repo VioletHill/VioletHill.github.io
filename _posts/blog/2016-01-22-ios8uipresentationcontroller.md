@@ -9,16 +9,16 @@ description: 实现模范 iOS App 中点击添加一个新邮件的效果
 <br>
 <br>
 
-![Demo](/images/blog/20150122demo.gif)
+![Demo](/images/blog/20160122demo.gif)
 
 <br>
 
-源码存放在了[这里](https://github.com/VioletHill/UIPresentationControllerDemo),其中 Tag 为 0.0.1 的是不支持手势的一个简单实现, Tag 0.0.2 实现了所有功能, 包括手势将 UIViewController 收缩回去。
+源码存放在了[这里](https://github.com/VioletHill/QIUPresentAnimationViewController)
 
-开始的时候，我们建立两个 UIViewController, 初始界面是一个简单的 `MailTableViewController`, 第二个 `EditViewController` 简单的模拟编辑邮件,中间一个 button,点击 dismiss 后运行 dismiss 代码。
+开始的时候，我们建立两个 UIViewController, 初始界面是一个简单的 `FirstViewController`, 第二个 `SecondViewController` 简单的模拟编辑邮件,中间一个 button,点击 dismiss 后运行 dismiss 代码。
 
 
-首先，明确一个概念，在我们做视图切换的时候(Present 方式)弹出来的新视图叫做 presentedViewController（`EditViewController`）， 原视图叫做 presentingViewController （`MailTableViewController`）， 在做 Present 动画视图切换的时候, 所有的动画效果由 presentedViewController 来控制，也就是即将被弹出的视图控制。因此，我们让 `EditViewController` 实现 `UIViewControllerTransitioningDelegate` 协议， 这个协议指定了动画的弹出方式,以及消失方式等等。
+首先，明确一个概念，在我们做视图切换的时候(Present 方式)弹出来的新视图叫做 presentedViewController（`SecondViewController`）， 原视图叫做 presentingViewController （`FirstViewController`）， 在做 Present 动画视图切换的时候, 所有的动画效果由 presentedViewController 来控制，也就是即将被弹出的视图控制。让 `SecondViewController` 实现 `UIViewControllerTransitioningDelegate` 协议，这个协议指定了动画的弹出方式,以及消失方式等等。
 	
 	@protocol UIViewControllerTransitioningDelegate <NSObject>
 
@@ -27,7 +27,7 @@ description: 实现模范 iOS App 中点击添加一个新邮件的效果
 
 这个协议返回了 `UIPresentationController` 对象, 这是在 iOS 8 之后新加入的 API, `UIPresentationController` 是管理视图切换的控制器,它可以控制新出来的视图如何显示,以及它的 size 等等。
 	
-我们创建一个 `UIPresentationController` 的子类 `MailPresentationController`，重写 `presentationTransitionWillBegin` 方法，
+我们创建一个 `UIPresentationController` 的子类 `QIUPresentationController`，重写 `presentationTransitionWillBegin` 方法，
 
 	- (void)presentationTransitionWillBegin {
     	[self.containerView addSubview:self.dimmingView];
@@ -47,15 +47,13 @@ description: 实现模范 iOS App 中点击添加一个新邮件的效果
     	return _dimmingView;
 	}
 	
-上述代码就是让 presentingViewController 在弹出新视图后呈现一个向后折叠的视差效果,当目前的问题在于新弹出的视图全屏挡住了原先的视图, 因此，重写方法 `- (CGRect)frameOfPresentedViewInContainerView`
+上述代码就是在弹出新视图后呈现一个向后折叠的视差效果,如果想要 `FirstViewController` 不全屏显示 ，重写方法 `- (CGRect)frameOfPresentedViewInContainerView`
 
 	- (CGRect)frameOfPresentedViewInContainerView {
     	return CGRectMake(0, 100, CGRectGetWidth(self.containerView.bounds), CGRectGetHeight(self.containerView.bounds) - 100);
 	}
 
-这个方法也就控制了 presentingViewController 的大小。
-
-之后，我们只需要在 `EditViewController` 实现 `UIViewControllerTransitioningDelegate` 的代理方法，并将对象 `MailPresentationController` 返回即可 
+之后，我们在 `SecondViewController` 实现 `UIViewControllerTransitioningDelegate` 的代理方法，并将对象 `QIUPresentationController` 返回
 
 	- (instancetype)initWithCoder:(NSCoder *)aDecoder {
     	if (self = [super initWithCoder:aDecoder]) {
@@ -68,17 +66,17 @@ description: 实现模范 iOS App 中点击添加一个新邮件的效果
 	#pragma mark - <UIViewControllerTransitioningDelegate>
 
 	- (UIPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented presentingViewController:(UIViewController *)presenting sourceViewController:(UIViewController *)source {
-	    MailPresentationController *controller = [[MailPresentationController alloc] initWithPresentedViewController:presented presentingViewController:presenting];
+	    QIUPresentationController *controller = [[QIUPresentationController alloc] initWithPresentedViewController:presented presentingViewController:presenting];
 	    return controller;
 	}
 	
-至此，我们完成了邮件弹入弹出方式的自定义实现。接下来，我们为 `EditViewController` 加入手势，当手势滑动超过一定百分比的时候，则向下消失这个 UIViewController。
+至此，我们完成了邮件弹入弹出方式的自定义实现。接下来，我们为 `SecondViewController` 加入手势，当手势滑动超过一定百分比的时候，则向下消失这个 UIViewController。
 
 在 `UIViewControllerTransitioningDelegate` 还有一个协议叫做 
 
 	- (id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
 
-这个方法就是控制 dismiss 时候的动画效果的，它需要返回一个实现了 `UIViewControllerAnimatedTransitioning` 的对象, 所以这里, 我们新建一个对象，叫做 `MailDismissAnimation`，并且实现协议 `UIViewControllerAnimatedTransitioning`
+这个方法就是控制 dismiss 时候的动画效果的，它需要返回一个实现了 `UIViewControllerAnimatedTransitioning` 的对象, 所以这里, 我们新建一个对象，叫做 `QIUDismissAnimation`，并且实现协议 `UIViewControllerAnimatedTransitioning`
 
 	- (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
     	return 0.4;
@@ -148,18 +146,18 @@ description: 实现模范 iOS App 中点击添加一个新邮件的效果
 	    return self.isInteracting ? self.percentDrivenInteractiveTransition : nil;
 	}
 	
-`UIPercentDrivenInteractiveTransition` 是 iOS 7 的新 API, 它负责控制 dismiss 时候动画的百分比，我们通过手势计算出滑动的距离，然后更新 `UIPercentDrivenInteractiveTransition` 的百分比，一旦超过 0.4，认为滑动结束，消失 Present 出来的 UIViewController。
-
-
-最后，为了防止 cancelInteractiveTransition 的时候， presentingViewController 没有了刚刚的视差效果，我们在 `MailPresentationController` 补上如果 dimiss 没有完成的情况处理
+到这里，几乎完成了所有的 mail 效果，但是 其实这不是最完美的解决方案，因为你可以看到当手势拖放一半的时候，后面的那个 CGAffineTransformIdentity 有点跳跃的感觉，更好的解决方案可以看 [GitHub](https://github.com/VioletHill/QIUPresentAnimationViewController) 中的代码, 主要的区别是子类化了 `UIPercentDrivenInteractiveTransition` 并且重写了
 	
-	- (void)dismissalTransitionDidEnd:(BOOL)completed {
-	    if (!completed) {   
-	        [UIView animateWithDuration:0.1 animations:^{
-	            self.presentingViewController.view.transform =  CGAffineTransformScale(CGAffineTransformIdentity, 0.9, 0.9);
-	            self.dimmingView.alpha = 0.4;
-	        } completion:nil];
-	    }
-	} 
+	- (void)updateInteractiveTransition:(CGFloat)percentComplete;
+	- (void)cancelInteractiveTransition;
+	- (void)finishInteractiveTransition;
 
+如果你实在没有耐心了，可以直接使用我的 Cocoapods `QIUPresentAnimation`.
+使用方法:
+		
+		#import "QIUPresentKit.h"
+
+	    UIViewController *nextController = [self.storyboard instantiateViewControllerWithIdentifier:@"EditViewController"];
+    QIUPresentViewController *controller = [[QIUPresentViewController alloc] initWithViewController:nextController];
+    [self presentViewController:controller animated:YES completion:nil];
 
