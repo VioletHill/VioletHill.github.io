@@ -155,9 +155,9 @@ description: 实现模范 iOS App 中点击添加一个新邮件的效果
 如果你实在没有耐心了，可以直接使用我的 Cocoapods `QIUPresentAnimation`.
 使用方法:
 		
-		#import "QIUPresentKit.h"
+	#import "QIUPresentKit.h"
 
-	    UIViewController *nextController = [self.storyboard instantiateViewControllerWithIdentifier:@"EditViewController"];
-    QIUPresentViewController *controller = [[QIUPresentViewController alloc] initWithViewController:nextController];
-    [self presentViewController:controller animated:YES completion:nil];
+	UIViewController *nextController = [self.storyboard instantiateViewControllerWithIdentifier:@"EditViewController"];
+	QIUPresentViewController *controller = [[QIUPresentViewController alloc] initWithViewController:nextController];
+	[self presentViewController:controller animated:YES completion:nil];
 
