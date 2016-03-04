@@ -17,7 +17,7 @@ App Thinning 主要分为 3 个部分:
 
 ### App Slicing
 
-我们正常的应用中都会用到图片资源，为了适配 iPhone 6 Plus 以及 iPhone 6, 图片资源需要包含 @2x 的图片 和 @3x 的图片，而 Slicing 就是在这一步进行优化，Slicing 会根据用户在 App Store 下载的不同设备选择对应的资源。例如：当用户使用 iPhone 6 在 App Store 上下载 App 的时候，App Store 只会给予他 @2x 的图片，而不会像以前一样，不管三七二十一我把所有的资源都给你，根据苹果的描述，这大约能节约你 30% 到 50% 的大小。而你要做的事情，仅仅是使用 Xcode 7 ID, 并且使用其中的 Assert Catalog 管理你的资源文件。
+我们正常的应用中都会用到图片资源，为了适配 iPhone 6 Plus 以及 iPhone 6, 图片资源需要包含 @2x 的图片 和 @3x 的图片，而 Slicing 就是在这一步进行优化，Slicing 会根据用户在 App Store 下载的不同设备选择对应的资源。例如：当用户使用 iPhone 6 在 App Store 上下载 App 的时候，App Store 只会给予他 @2x 的图片，而不会像以前一样，不管三七二十一我把所有的资源都给你，根据苹果的描述，这大约能节约你 30% 到 50% 的大小。而你要做的事情，仅仅是使用 Xcode 7 IDE, 并且使用其中的 Assert Catalog 管理你的资源文件。
 
 不过 Slicing 因为 iCloud 备份的问题, 知道 iOS 9.0.2 以及 Xcode 7.0.1 才可以被使用
 

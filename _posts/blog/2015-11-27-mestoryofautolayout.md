@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 	Autolayout 背后的秘密
+title: 	AutoLayout 背后的秘密
 category: blog
-description: Autolayout 究竟做了那些事情？
+description: AutoLayout 究竟做了那些事情？
 ---
 
 我们先看一个 Layout 的周期
@@ -34,7 +34,7 @@ description: Autolayout 究竟做了那些事情？
   
   WWDC 中还强调，最好不要去重写 layoutSubviews(), 如果你真的要这么做，那么你需要注意这么几件事情:
   
-  * 当你的约束不足的时候，去重写 layoutSubviews, 补充不足的约束(比如 补充一些 没有使用 Autolayout 的 subview 的 frame)
+  * 当你的约束不足的时候，去重写 layoutSubviews, 补充不足的约束(比如 补充一些 没有使用 AutoLayout 的 subview 的 frame)
   * 一些 view 已经 layout 完毕了，还有一些 view 没有布局完成(应该是指和自己是兄弟 view 的视图)，不过它们马上就会被 layout。    
   
     #### Do ####
