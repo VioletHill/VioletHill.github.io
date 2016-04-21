@@ -94,9 +94,14 @@ Split View 的概念就是你可以在一个 iPad 中同时使用 2 个 App, 就
 		UIKeyboardWillShowNotification		UIKeyboardDidShowNotification		UIKeyboardWillHideNotification		UIKeyboardDidHideNotification		UIKeyboardWillChangeFrameNotification		UIKeyboardDidChangeFrameNotification
 	
 	
-适配 Multitasking 的几个建议
+适配 Multitasking 的几个建议:
 
-* Be flexible* Auto Layout* Size Classes in Xcode * Adaptivity Callbacks* High-level API* Split View Controller
+*  Be flexible
+ *  Auto Layout
+*  Size Classes in Xcode 
+
+*  Adaptivity Callbacks
+ *  High-level API*  Split View Controller
  
   
 
