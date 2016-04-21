@@ -35,6 +35,8 @@ Split View 的概念就是你可以在一个 iPad 中同时使用 2 个 App, 就
 * 让设备支持所有方向 （Portrait, Upside Down, Landscape Left, Landscape Right）
 * 使用 Launch Storyboards
 
+---
+
 对于所有的 UI 适配，使用 AutoLayout（在 iOS 9 以后， AutoLayout 支持了 Right-to-left language） 适配，否则，你的 App 很难适配 Multitasking， 由于 Multitasking 的特殊性，以下几个代码需要更新到新版本：
 
 * ###UIScreen & UIWindows
@@ -51,28 +53,33 @@ Split View 的概念就是你可以在一个 iPad 中同时使用 2 个 App, 就
 	所以，下面的代码将被时代抛弃：
 	
 		if UIInterfaceOrientationIsLandscape(interfaceOrientation) {
-					// ...
-		}
-
-	原因在于，当一个 App 处在 Slide Over 的时候，即使他是横屏，仍然可以模拟出 Portrait 的状态，如图：
-	
-
-    取而代之的可以使用这种方法：
-
-    	if view.bounds.size.width > view.bounds.size.height {
-    				// ...			}
-	
-		//推荐
-				if traitCollection.horizontalSizeClass == .Regular {					// ...  
-		
+			...
 		}
-
+		
+	原因在于，当一个 App 处在 Slide Over 的时候，即使他是横屏，仍然可以模拟出 Portrait 的状态，如 Slide Over
+	
+    取而代之的可以使用这种方法：
+    
+    	if view.bounds.size.width > view.bounds.size.height {
+    		...
+    	}
+    	
+    	推荐
+    	if traitCollection.horizontalSizeClass == .Regular {
+    		... 
+		}
+		
 * ###旋转设备更新
  
   在以前，你可能写过这样的代码：
-  	
-		willRotateToInterfaceOrientation		didRotateFromInterfaceOrientation		willAnimateRotationToInterfaceOrientation
-  同样，因为时代的更新，这些代码也将逐渐被废弃，事实上，我们看到 UIKit 的头文件中，这些代码已经被废弃了    		@available(iOS, introduced=2.0, deprecated=8.0, message="Implement viewWillTransitionToSize:withTransitionCoordinator: instead")
+  		
+  		willRotateToInterfaceOrientation
+  		didRotateFromInterfaceOrientation
+  		willAnimateRotationToInterfaceOrientation
+  		
+  同样，因为时代的更新，这些代码也将逐渐被废弃，事实上，我们看到 UIKit 的头文件中，这些代码已经被废弃了
+  		
+  		@available(iOS, introduced=2.0, deprecated=8.0, message="Implement viewWillTransitionToSize:withTransitionCoordinator: instead")
     	public func willRotateToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval)
 	
   取而代之的是，使用如下的新 API:
@@ -90,33 +97,33 @@ Split View 的概念就是你可以在一个 iPad 中同时使用 2 个 App, 就
 由于某些 Resize 情况下,  SizeClass 不会发生改变，所以 有可能 `traitCollectionDidChnage`, 但是 因为 size 的变化， 所以仍然会触发 `viewWillTransitionToSize`
 
 * ### UIPopoverPresentationController	
-	UIPopoverPresentationController 在模式为 Popover 时，SizeClass 为 Compact 会显示为 Popover 的形式，为 Regular 时，会自动变成 FullScreen
+	`UIPopoverPresentationController` 在模式为 Popover 时，SizeClass 为 Compact 会显示为 Popover 的形式，为 Regular 时，会自动变成 FullScreen。
+	
 	如果想改变这个状况，可以实现 UIAdaptivePresentationControllerDelegate 中的：
 	
 		@available(iOS 8.3, *)
-    	optional public func adaptivePresentationStyleForPresentationController(controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle
+    	optional public func adaptivePresentationStyleForPresentationController(controller:UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle
 	
 * ### Keyboard
 	
 	由于 Multitasking 的介入，所以 当你在使用其他 App 的时候，你的任何一个界面都可能被唤起键盘，因为在 Split View 下，任何一个 App 都可以唤起键盘，所以，如果你想要更好的体验，可以使用下面的 Notification 处理键盘事件：
-	
 		
 		UIKeyboardWillShowNotification
-				UIKeyboardDidShowNotification
-		UIKeyboardWillHideNotification
-		UIKeyboardDidHideNotification
-		UIKeyboardWillChangeFrameNotification
-		UIKeyboardDidChangeFrameNotification
+		UIKeyboardDidShowNotification
+		UIKeyboardWillHideNotification
+		UIKeyboardDidHideNotification
+		UIKeyboardWillChangeFrameNotification
+		UIKeyboardDidChangeFrameNotification
 	
 	
 适配 Multitasking 的几个建议:
 
 *  Be flexible
- *  Auto Layout
-*  Size Classes in Xcode 
-
+*  Auto Layout
+*  Size Classes in Xcode
 *  Adaptivity Callbacks
- *  High-level API*  Split View Controller
+*  High-level API
+*  Split View Controller
  
   
 
