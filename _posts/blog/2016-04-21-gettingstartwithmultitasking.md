@@ -5,7 +5,6 @@ category: blog
 description: iOS 9 中 App Thinning 的介绍
 ---
 
-
 让我们先对 Multitasking 作一个简单的介绍：
 
 ###### 硬件要求： iPad Pro, iPad Air, iPad Air 2, and iPad mini 2 以及以后设备.
@@ -17,6 +16,7 @@ Slide Over 可以让你在不离开一个 App 的情况下，快速的启动另�
 
 操作方式很简单，从 iPad 的最右边开始，用滑动手势从右向左滑动，即可滑动出 Slide Over 页面，当你需要切换 Slide Over 的 App 时，只需要在 Slide Over 界面从上向下滑动，就可以切换其他 App
 
+
 ![Slide Over](/images/blog/GettingStartWithMultitasking/ipad-ios9-slide-over.jpg)
 
 ### Split View:
@@ -25,7 +25,9 @@ Split View 的概念就是你可以在一个 iPad 中同时使用 2 个 App, 就
 
 当然，Split View 需要 App 的支持，例如：Safari, Notes, Photos, Maps, 这些 App 都支持了 Split View
 
+
 ![Split View](/images/blog/GettingStartWithMultitasking/ipad-ios9-split-view.jpg)
+
 
 ## 如何为 iPad 适配 Multitasking
 
@@ -48,16 +50,21 @@ Split View 的概念就是你可以在一个 iPad 中同时使用 2 个 App, 就
 	
 	所以，下面的代码将被时代抛弃：
 	
-		if UIInterfaceOrientationIsLandscape(interfaceOrientation) {			// ...		}
+		if UIInterfaceOrientationIsLandscape(interfaceOrientation) {
+					// ...
+		}
 
 	原因在于，当一个 App 处在 Slide Over 的时候，即使他是横屏，仍然可以模拟出 Portrait 的状态，如图：
 	
 
     取而代之的可以使用这种方法：
 
-    	if view.bounds.size.width > view.bounds.size.height {			// ...		}
+    	if view.bounds.size.width > view.bounds.size.height {
+    				// ...			}
 	
-		//推荐		if traitCollection.horizontalSizeClass == .Regular {			// ...  
+		//推荐
+				if traitCollection.horizontalSizeClass == .Regular {					// ...  
+		
 		}
 
 * ###旋转设备更新
@@ -76,7 +83,9 @@ Split View 的概念就是你可以在一个 iPad 中同时使用 2 个 App, 就
   
 设备发生 Sizes Change 的生命周期：
 
+
 ![Slide Over](/images/blog/GettingStartWithMultitasking/size-change.jpg)
+
 
 由于某些 Resize 情况下,  SizeClass 不会发生改变，所以 有可能 `traitCollectionDidChnage`, 但是 因为 size 的变化， 所以仍然会触发 `viewWillTransitionToSize`
 
@@ -90,8 +99,14 @@ Split View 的概念就是你可以在一个 iPad 中同时使用 2 个 App, 就
 * ### Keyboard
 	
 	由于 Multitasking 的介入，所以 当你在使用其他 App 的时候，你的任何一个界面都可能被唤起键盘，因为在 Split View 下，任何一个 App 都可以唤起键盘，所以，如果你想要更好的体验，可以使用下面的 Notification 处理键盘事件：
+	
 		
-		UIKeyboardWillShowNotification		UIKeyboardDidShowNotification		UIKeyboardWillHideNotification		UIKeyboardDidHideNotification		UIKeyboardWillChangeFrameNotification		UIKeyboardDidChangeFrameNotification
+		UIKeyboardWillShowNotification
+				UIKeyboardDidShowNotification
+		UIKeyboardWillHideNotification
+		UIKeyboardDidHideNotification
+		UIKeyboardWillChangeFrameNotification
+		UIKeyboardDidChangeFrameNotification
 	
 	
 适配 Multitasking 的几个建议:
