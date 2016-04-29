@@ -2,7 +2,7 @@
 layout: post
 title: 	让你的 App 开启 Multitasking 之旅
 category: blog
-description: iOS 9 中 App Thinning 的介绍
+description: App UI 适配 Multitasking
 ---
 
 让我们先对 Multitasking 作一个简单的介绍：
