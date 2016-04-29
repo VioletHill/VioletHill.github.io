@@ -19,7 +19,7 @@ AVPlayerViewController 在 iOS 8 以后取代了 MediaPlay
 
 首先，去 项目 -> Capabilities -> 打开 Background Modes， 选择 Audio, AirPlay and Picture in Picture
 
-设置你的 AVAudioSessionCategory 为 AVAudioSessionCategoryPlayback， 可以在 ` func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool ` 中设置
+设置你的 AVAudioSessionCategory 为 AVAudioSessionCategoryPlayback， 可以在 `func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool` 中设置
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         let audioSession = AVAudioSession.sharedInstance()
