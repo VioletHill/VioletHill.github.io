@@ -5,4 +5,5 @@ pygments: true
 permalink: /:title
 title: Qiu Feng
 url: /
+highlighter: rouge
 author_info: <a href="www.qiufeng.me">Qiu Feng</a>
