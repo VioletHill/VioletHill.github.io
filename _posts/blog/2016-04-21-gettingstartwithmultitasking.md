@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 	让你的 App 开启 Multitasking 之旅
+title: 	让你的 App 开启 Multitasking 之旅（一）
 category: blog
 description: App UI 适配 Multitasking
 ---
 
 让我们先对 Multitasking 作一个简单的介绍：
 
-###### 硬件要求： iPad Pro, iPad Air, iPad Air 2, and iPad mini 2 以及以后设备.
+###### 硬件要求： iPad Pro, iPad Air（不支持分屏）, iPad Air 2, and iPad mini 2 以及以后设备.
 ###### 软件要求： iOS 9 以其以后的操作系统
 
 ### Slide Over：
