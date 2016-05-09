@@ -42,33 +42,32 @@ Split View 的概念就是你可以在一个 iPad 中同时使用 2 个 App, 就
 
 ### UIScreen & UIWindows
 
-		 UIScreen.bounds  //返回的是屏幕的 bounds， 也就是设备的 bounds， 有可能不在是你 App 运行环境的 bounds 了
-		 UIWindows.bounds //返回你 App 运行环境的 bounds，并且 origin 永远返回 (0，0)
-		 
-	所以 如果你之前使用 UIScreen 来进行布局的话，尽快更换为 AutoLayout, 或者使用 UIWindows.bounds
+	 UIScreen.bounds  //返回的是屏幕的 bounds， 也就是设备的 bounds， 有可能不在是你 App 运行环境的 bounds 了
+	 UIWindows.bounds //返回你 App 运行环境的 bounds，并且 origin 永远返回 (0，0)
+	 
+所以 如果你之前使用 UIScreen 来进行布局的话，尽快更换为 AutoLayout, 或者使用 UIWindows.bounds
 
 ### SizeClass 的应用
 
-	SizeClass 是在 iOS 8 中提出的概念，对于宽度分为 Horizontally Regular 和 Horizontally Compact，在 iOS 8 中可以区分 iPhone 和 iPad，以及 iPhone 的横屏布局。现在，同样适用于 Slide Over 以及 Split View， 在 Slide Over 中，宽度类型为 Horizontally Compact，在 Split View 为 Horizontally Regular
+SizeClass 是在 iOS 8 中提出的概念，对于宽度分为 Horizontally Regular 和 Horizontally Compact，在 iOS 8 中可以区分 iPhone 和 iPad，以及 iPhone 的横屏布局。现在，同样适用于 Slide Over 以及 Split View， 在 Slide Over 中，宽度类型为 Horizontally Compact，在 Split View 为 Horizontally Regular
 	
-	所以，下面的代码将被时代抛弃：
+所以，下面的代码将被时代抛弃：
+
+	if UIInterfaceOrientationIsLandscape(interfaceOrientation) {
+		...
+	}
 	
-		if UIInterfaceOrientationIsLandscape(interfaceOrientation) {
-			...
-		}
-		
-	原因在于，当一个 App 处在 Slide Over 的时候，即使他是横屏，仍然可以模拟出 Portrait 的状态，如 Slide Over
-	
-    取而代之的可以使用这种方法：
-    
-    	if view.bounds.size.width > view.bounds.size.height {
-    		...
-    	}
-    	
-    	推荐
-    	if traitCollection.horizontalSizeClass == .Regular {
-    		... 
-		}
+原因在于，当一个 App 处在 Slide Over 的时候，即使他是横屏，仍然可以模拟出 Portrait 的状态，如 Slide Over
+
+   	取而代之的可以使用这种方法：
+   	if view.bounds.size.width > view.bounds.size.height {
+   		...
+   	}
+   	
+   	推荐
+   	if traitCollection.horizontalSizeClass == .Regular {
+   		... 
+	}
 		
 ### 旋转设备更新
  
@@ -98,23 +97,23 @@ Split View 的概念就是你可以在一个 iPad 中同时使用 2 个 App, 就
 由于某些 Resize 情况下,  SizeClass 不会发生改变，所以 有可能 `traitCollectionDidChnage`, 但是 因为 size 的变化， 所以仍然会触发 `viewWillTransitionToSize`
 
 ### UIPopoverPresentationController	
-	`UIPopoverPresentationController` 在模式为 Popover 时，SizeClass 为 Compact 会显示为 Popover 的形式，为 Regular 时，会自动变成 FullScreen。
-	
-	如果想改变这个状况，可以实现 UIAdaptivePresentationControllerDelegate 中的：
-	
-		@available(iOS 8.3, *)
-    	optional public func adaptivePresentationStyleForPresentationController(controller:UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle
+`UIPopoverPresentationController` 在模式为 Popover 时，SizeClass 为 Compact 会显示为 Popover 的形式，为 Regular 时，会自动变成 FullScreen。
+
+如果想改变这个状况，可以实现 UIAdaptivePresentationControllerDelegate 中的：
+
+	@available(iOS 8.3, *)
+   	optional public func adaptivePresentationStyleForPresentationController(controller:UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle
 	
 ### Keyboard
 	
-	由于 Multitasking 的介入，所以 当你在使用其他 App 的时候，你的任何一个界面都可能被唤起键盘，因为在 Split View 下，任何一个 App 都可以唤起键盘，所以，如果你想要更好的体验，可以使用下面的 Notification 处理键盘事件：
-		
-		UIKeyboardWillShowNotification
-		UIKeyboardDidShowNotification
-		UIKeyboardWillHideNotification
-		UIKeyboardDidHideNotification
-		UIKeyboardWillChangeFrameNotification
-		UIKeyboardDidChangeFrameNotification
+由于 Multitasking 的介入，所以 当你在使用其他 App 的时候，你的任何一个界面都可能被唤起键盘，因为在 Split View 下，任何一个 App 都可以唤起键盘，所以，如果你想要更好的体验，可以使用下面的 Notification 处理键盘事件：
+	
+	UIKeyboardWillShowNotification
+	UIKeyboardDidShowNotification
+	UIKeyboardWillHideNotification
+	UIKeyboardDidHideNotification
+	UIKeyboardWillChangeFrameNotification
+	UIKeyboardDidChangeFrameNotification
 	
 	
 适配 Multitasking 的几个建议:
