@@ -34,6 +34,7 @@ Split View 的概念就是你可以在一个 iPad 中同时使用 2 个 App, 就
 * 使用 iOS 9 以后的 SDK
 * 让设备支持所有方向 （Portrait, Upside Down, Landscape Left, Landscape Right）
 * 使用 Launch Storyboards
+* 关闭 Requires full screen 选项
 
 ---
 
