@@ -1,5 +1,6 @@
 ---
 layout: post
+section-type: post
 title: 	让你的 App 开启 Multitasking 之旅（一）
 category: blog
 description: App UI 适配 Multitasking

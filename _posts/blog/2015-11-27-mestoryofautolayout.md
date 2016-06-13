@@ -1,5 +1,6 @@
 ---
 layout: post
+section-type: post
 title: 	AutoLayout 背后的秘密
 category: blog
 description: AutoLayout 究竟做了那些事情？
@@ -22,17 +23,17 @@ description: AutoLayout 究竟做了那些事情？
 
 ---
   
-  最后一步是 Deferred Layout Pass, 这一步过后，所有 view 的 frame 将被重新布局完毕，
+最后一步是 Deferred Layout Pass, 这一步过后，所有 view 的 frame 将被重新布局完毕，
+    
+Deferred Layout Pass 包含了 2 个步骤
+   
+ * 对 constraints 的错误处理 (比如 你让一个 view 居中，但是没有设定它的宽度和高度，Deferred Layout Pass 会处理这些事情 )
+ * 重新布局 view 的位置
+    
+完成 Layout 的布局以后，将 subview 的 frame 从 Layout Engine 中拷贝出来给视图，并且从父类开始，向下调用 layoutSubview() 方法
   
-  Deferred Layout Pass 包含了 2 个步骤
-  
-  * 对 constraints 的错误处理 (比如 你让一个 view 居中，但是没有设定它的宽度和高度，Deferred Layout Pass 会处理这些事情)
-  * 重新布局 view 的位置
-  
-  完成 Layout 的布局以后，将 subview 的 frame 从 Layout Engine 中拷贝出来给视图，并且从父类开始，向下调用 layoutSubview() 方法
-  
-  
-  WWDC 中还强调，最好不要去重写 layoutSubviews(), 如果你真的要这么做，那么你需要注意这么几件事情:
+    
+WWDC 中还强调，最好不要去重写 layoutSubviews(), 如果你真的要这么做，那么你需要注意这么几件事情:
   
   * 当你的约束不足的时候，去重写 layoutSubviews, 补充不足的约束(比如 补充一些 没有使用 AutoLayout 的 subview 的 frame)
   * 一些 view 已经 layout 完毕了，还有一些 view 没有布局完成(应该是指和自己是兄弟 view 的视图)，不过它们马上就会被 layout。    

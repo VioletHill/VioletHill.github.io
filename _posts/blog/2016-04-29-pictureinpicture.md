@@ -1,18 +1,19 @@
 ---
 layout: post
+section-type: post
 title: 	让你的 App 开启 Multitasking 之旅（二）
 category: blog
 description: iPad Multitasking —— Picture in Picture (PiP)
+tags: [ 'tutorial' ]
 ---
 
-###### 硬件要求： iPad Pro, iPad Air, iPad Air 2, and iPad mini 2 以及以后设备.
+#### 硬件要求： iPad Pro, iPad Air, iPad Air 2, and iPad mini 2 以及以后设备.
 
 #### Picture in Picture (PiP)
 
 Picture in Picture 能够让你的 App 在后台继续运行视频播放
 
 #### PiP 适配
-
 AVPlayerViewController 在 iOS 8 以后取代了 MediaPlay
 
 在 iOS 9 中，播放 API 还有 AVKit, AVFounddataion, WebKit，这 3 个 Framework 都支持 PiP
@@ -95,7 +96,7 @@ AVPlayerViewController 在 iOS 8 以后取代了 MediaPlay
         completionHandler(true)
     }
     
-## WebKit
+#### WebKit
 
 `WKWebView` 将会自动支持 PictureInPicture, 如果 你还使用 UIWebView, 那么 可以设置 `allowsPictureInPictureMediaPlayback` 的属性
 
