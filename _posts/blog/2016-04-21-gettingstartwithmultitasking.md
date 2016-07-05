@@ -1,6 +1,5 @@
 ---
 layout: post
-section-type: post
 title: 	让你的 App 开启 Multitasking 之旅（一）
 category: blog
 description: App UI 适配 Multitasking
@@ -9,6 +8,7 @@ description: App UI 适配 Multitasking
 让我们先对 Multitasking 作一个简单的介绍：
 
 ###### 硬件要求： iPad Pro, iPad Air（不支持分屏）, iPad Air 2, and iPad mini 2 以及以后设备.
+
 ###### 软件要求： iOS 9 以其以后的操作系统
 
 ### Slide Over：
@@ -81,12 +81,13 @@ SizeClass 是在 iOS 8 中提出的概念，对于宽度分为 Horizontally Regu
   同样，因为时代的更新，这些代码也将逐渐被废弃，事实上，我们看到 UIKit 的头文件中，这些代码已经被废弃了
   		
 	@available(iOS, introduced=2.0, deprecated=8.0, message="Implement viewWillTransitionToSize:withTransitionCoordinator: instead")
-  	public func willRotateToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval)
+	public func willRotateToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval)
+  	
 	
-  取而代之的是，使用如下的新 API:
-  
- 	@available(iOS 8.0, *)
-   	public func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator)
+取而代之的是，使用如下的新 API:
+	
+	@available(iOS 8.0, *)
+	public func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator)
     	
   
 设备发生 Sizes Change 的生命周期：

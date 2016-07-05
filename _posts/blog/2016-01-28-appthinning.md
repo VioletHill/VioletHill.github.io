@@ -1,6 +1,5 @@
 ---
 layout: post
-section-type: post
 title: 	iOS 9 App Thinning
 category: blog
 description: iOS 9 中 App Thinning 的介绍

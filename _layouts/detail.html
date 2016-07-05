@@ -1,0 +1,61 @@
+---
+layout: base
+---
+
+<link rel="stylesheet" href="/css/detail.css" />
+<link rel="stylesheet" href="/css/projects.css" />
+
+<div class="container">
+	<div class="container-fluid">
+		<h2>{{ page.title }}</h2>
+		<br>
+
+		<div class="leftContainer" style="float:left">
+			<div>
+				<img class="iconImage" src="{{page.image}}">
+			</div>
+			<br>
+			<div>
+				<a class="btn btn-primary" style="border-radius: 15px" href="{{page.itunesLink}}">View in iTunes</a>
+			</div>
+			<br>
+			<br>
+			<p>
+				<span class="projectItemTitle">{{page.cost}}</span><br>
+				<span class="projectItemTitle">类别</span>:<span class="projectItemInfo"> {{page.type}}</span><br>
+				<span class="projectItemTitle">{{page.publish}}</span>:<span class="projectItemInfo"> {{page.publishDate}}</span><br>
+				<span class="projectItemTitle">版本</span>:<span class="projectItemInfo"> {{page.version}}</span><br>
+				<span class="projectItemTitle">大小</span>:<span class="projectItemInfo"> {{page.size}}</span><br>
+				<span class="projectItemTitle">版权</span>:<span class="projectItemInfo">{{page.copyright}}</span><br>
+				<span class="projectItemTitle">兼容</span>:<span class="projectItemInfo"> {{page.require}}</span> <br>
+			</p>
+		</div>
+		<div class="rightContainer" style="float:right">
+			<h3>内容提要</h3>
+			<div  id="projectContent">
+				{{content}}
+			</div>
+
+			<script>
+				$(document).ready(function(){
+					$("#projectContent").addClass('projectItemInfo');
+				});
+			</script>
+			<br>
+
+			<h3>屏幕截图</h3>
+			<div id="screenShootContainer" style="overflow:scroll; white-space:nowrap">
+				<script>
+					var screenShoot={{page.screenShoot}};
+					for (var i=0; i<screenShoot.length; i++)
+					{
+						var img="<img class='screenShootItem' src='"+screenShoot[i]+"'>";
+						console.log(img);
+						$("#screenShootContainer").append(img);
+					}
+
+				</script>
+			</div>
+		</div>
+	</div>
+</div>

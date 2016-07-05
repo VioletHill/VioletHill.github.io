@@ -1,6 +1,5 @@
 ---
 layout: post
-section-type: post
 title: 	制作自己的 CocoaPods
 category: blog
 description: 在 GitHub 中制作一个自己的 CocoaPods

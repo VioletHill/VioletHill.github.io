@@ -1,15 +1,17 @@
 ---
 layout: post
-section-type: post
 title: 	iOS 8 中 UIPresentationController 使用
 category: blog
 description: 实现模范 iOS App 中点击添加一个新邮件的效果
 ---
 
 这个教程将交你如何制作 iOS 内置的邮件 App 点击新建后弹出一个编辑邮件的 ViewController 的效果，具体的效果如下图所示:
+<br>
+<br>
 
 ![Demo](/images/blog/20160122demo.gif)
 
+<br>
 
 源码存放在了[这里](https://github.com/VioletHill/QIUPresentAnimationViewController)
 
