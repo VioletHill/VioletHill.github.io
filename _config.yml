@@ -1,7 +1,7 @@
 exclude: ["node_modules", "gulpfile.js", "package.json"]
 
 markdown: kramdown
-pygments: true
+highlighter: pygments
 permalink: /:title
 title: Qiu Feng
 url: /
@@ -21,8 +21,8 @@ type-speed: 10
 start-delay: 200
 delete-delay: 5000
 lines: # You can add HTML Tags in the Text
-  - text: "the epicenter of change. --- 2015"
-  - text: "Write the Code. Change the world. --- 2014"
+  - text: "The epicenter of change. --- 2015"
+  - text: "Write the code. Change the world. --- 2014"
   - text: "A whole new world is developing. --- 2013"
   - text: "Where great ideas go on to do great things. --- 2012"
 

@@ -729,7 +729,7 @@ footer {
       height: 180px;
       width: 180px;
       border-radius: 50%;
-      background: url(../img/android.JPG);
+      background: url(../img/homeAvatarHover.png);
       margin: auto; }
     .about-lock .flip-container {
       -webkit-perspective: 1000;
@@ -1280,19 +1280,17 @@ form {
     justify-content: space-between;
     -ms-flex-pack: justify;
     padding-left: 10px; }
-  .title:hover {
-    padding-left: 10px; }
   .post-title {
     font-size: 25px;
     letter-spacing: -1px;
     line-height: 1;
-    padding-left: 10px; }
-    .post-title:hover {
-      padding-left: 10px; }
+    margin-left:auto;
+    margin-right:auto; }
   .post-meta {
     margin-bottom: 0px;
     padding-bottom: 20px;
-    padding-left: 10px; }
+    margin-left:auto;
+    margin-right:auto; }
   .post-link {
     display: block;
     font-size: 40px; }
@@ -1342,14 +1340,14 @@ form {
 
 @media only screen and (min-width: 1070px) {
   .post-header {
-    max-width: 750px;
+    max-width: 1000px;
     margin: 0 auto; }
   .title:hover {
-    max-width: 750px; }
+    max-width: 1000px; }
   .post-wrapper {
-    max-width: 780px; }
+    max-width: 1000px; }
   .comment {
-    max-width: 780px; }
+    max-width: 1000px; }
   .blurb-blog {
     font-size: 15px;
     font-weight: 30; }
