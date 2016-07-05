@@ -852,7 +852,6 @@ footer {
 @media only screen and (min-width: 1070px) {
   .about-lock {
     max-width: 980px; } }
-
 .blurb {
   max-width: 750px;
   padding: 0 15px;
@@ -1253,6 +1252,9 @@ form {
     padding-left: 10px; }
 
 @media only screen and (min-width: 220px) {
+  .post-content>img {
+    max-width:270px;
+  }
   .post-header {
     max-width: 270px;
     display: -webkit-box;
@@ -1320,6 +1322,9 @@ form {
     margin-top: 30px; } }
 
 @media only screen and (min-width: 650px) {
+  .post-content>img {
+    max-width:650px;
+  }
   .post-header {
     max-width: 650px;
     margin: 0 auto; }
@@ -1339,6 +1344,9 @@ form {
     margin-top: 30px; } }
 
 @media only screen and (min-width: 1070px) {
+  .post-content>img {
+    max-width:1000px;
+  }
   .post-header {
     max-width: 1000px;
     margin: 0 auto; }

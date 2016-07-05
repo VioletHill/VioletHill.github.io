@@ -13,10 +13,10 @@ layout: default
 {% for post in site.categories['blog'] limit:3%}
 
     <div class="post-header title">
-      <a href="{{post.url}}"><h1 class="post-title">{{ post.title }}</h1></a>
+      <a href="{{post.url}}" style="margin-left:auto; margin-right:auto;"><h1 class="post-title">{{ post.title }}</h1></a>
     </div>
     <div class="post-header date">
-      <p class="post-meta">{{ post.date | date: "%B %-d, %Y — %H:%M" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}</p>
+      <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}</p>
     </div>
 
 {% endfor %}
