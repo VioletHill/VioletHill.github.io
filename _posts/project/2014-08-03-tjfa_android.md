@@ -3,12 +3,11 @@ layout: detail
 title:  同济足协
 category: android_projects
 image: /images/iOS/tjfa.jpg
-cost: 免费
-type: 体育
+cost: Free
+type: Sports
 version: 1.0.0
-publish: 发布
-publishDate: 2015年03月20日
+released: Mar 20, 2015
 size: 7.98 MB
 copyright: © 同济大学足球协会
-require: Android 4.0 以上
+require: Android 4.0 
 ---
