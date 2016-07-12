@@ -4,15 +4,14 @@ title:  Starving Snake
 category: tvOS_projects
 image: /images/iOS/tjfa.jpg
 cost: $0.99
-type: 体育
-publish: 更新
+type: Games
 version: 1.0
-publishDate: 2014年10月10日
-size: 50.2 MB
-copyright: © 2015 同济大学苹果俱乐部
-require: 需要 tvOS 9.0 或更高版本。与 iPhone、iPad、iPod touch 兼容。 此 App 已针对 iPhone 5、iPhone 6 和 iPhone 6 Plus 优化。
-screenShoot: "['/images/iOS/tjfa/1.jpg','/images/iOS/tjfa/2.jpg','/images/iOS/tjfa/3.jpg','/images/iOS/tjfa/4.jpg']"
-itunesLink: https://itunes.apple.com/app/id1063714400?mt=8&ign-mpt=uo%3D4
+publishDate: Dec 18, 2015
+size: 4.2 MB
+copyright: © 2015 Tongji Apple Club
+require: Requires tvOS 9.0 or later.
+screenShoot: "['/images/tvOS/startvingSnake/0.jpg','/images/tvOS/startvingSnake/1.jpg','/images/tvOS/startvingSnake/2.jpg']"
+itunesLink: https://itunes.apple.com/app/x/id1063714400?mt=8
 ---
 
 <div>
