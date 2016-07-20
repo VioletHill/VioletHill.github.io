@@ -120,7 +120,7 @@ layout: base
 				
 				<li id="time2013">
 					<div>
-						<p><span class="title">Apr.</span><span class="info">Second Prize Of "Programming Contest" In Tongji University</span></p>
+						<p><span class="title">Apr.</span><span class="info">Second Prize Of "Programming Contest" in Tongji University</span></p>
 						<p><span class="title">May.</span><span class="info">Volunteer of "Challenge Cup"</span></p>
 						<p><span class="title">Sep.</span><span class="info">Assistant of "Java Language" Course</span></p>
 						<p><span class="title">Sep.</span><span class="info">Chairman of Tongji Football Association</span></p>
@@ -130,7 +130,7 @@ layout: base
 				</li>
 				<li id="time2012">
 					<div>
-						<p><span class="title">Apr.</span><span class="info">Second Prize of "Programming Contest" In Tongji University</span></p>
+						<p><span class="title">Apr.</span><span class="info">Second Prize of "Programming Contest" in Tongji University</span></p>
 						<p><span class="title">Sep.</span><span class="info">Assistant of "C Language" Course</span></p>
 						<p><span class="title">Nov.</span><span class="info">Volunteer of "Challenge Cup"</span></p>
 						<p><span class="title">Dec.</span><span class="info">Silver Prize of "IBM Master the Mainframe Contest China"</span></p>

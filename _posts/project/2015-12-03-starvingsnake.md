@@ -2,7 +2,7 @@
 layout: detail
 title: Starving Snake
 category: tvos_projects
-image: /images/tvOS/startvingSnake/icon.jpeg
+image: /images/tvOS/startvingSnake/icon.png
 cost: $0.99
 type: Games
 version: 1.0
