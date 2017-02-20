@@ -39,7 +39,8 @@ description: AutoLayout 究竟做了那些事情？
   
     #### Do ####
   
-  * 调用 super.layoutSubviews() (这里好奇怪，既然从上往下调用 layoutSubview, 为何又要去调 super.layoutSubviews() )
+  * 调用 super.layoutSubviews() 
+
   * 所有的操作应该只在你这个 view 的 subtree 中
    
     #### Don't ####
