@@ -7,7 +7,7 @@ description: AutoLayout 究竟做了那些事情？
 
 我们先看一个 Layout 的周期
 
-<div>
+<div style="text-align:center">
 <img src="images/blog/20151127_1.png" width = "300" height = "250" alt="Layout Engine" align=center />
 </div>
 
