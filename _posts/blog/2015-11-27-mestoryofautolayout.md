@@ -7,9 +7,7 @@ description: AutoLayout 究竟做了那些事情？
 
 我们先看一个 Layout 的周期
 
-<div style="text-align:center">
-<img src="images/blog/20151127_1.png" width = "300" height = "250" alt="Layout Engine" align=center />
-</div>
+![](/images/blog/20151127_1.png)
 
    项目以 Run Loop 的形式启动，当约束发生改变的时候，Layout Engine 会重新计算 Layout，之后到 Deferred Layout Pass, 最后，所有的布局完成
   
