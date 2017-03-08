@@ -7,7 +7,7 @@ description: AutoLayout 究竟做了那些事情？
 
 我们先看一个 Layout 的周期
 
-![](/images/blog/20151127_1.png =300x250)
+![](/images/blog/20151127_1.png)
 
    项目以 Run Loop 的形式启动，当约束发生改变的时候，Layout Engine 会重新计算 Layout，之后到 Deferred Layout Pass, 最后，所有的布局完成
   
@@ -39,7 +39,8 @@ description: AutoLayout 究竟做了那些事情？
   
     #### Do ####
   
-  * 调用 super.layoutSubviews() (这里好奇怪，既然从上往下调用 layoutSubview, 为何又要去调 super.layoutSubviews() )
+  * 调用 super.layoutSubviews() 
+
   * 所有的操作应该只在你这个 view 的 subtree 中
    
     #### Don't ####

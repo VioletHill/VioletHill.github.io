@@ -4,20 +4,16 @@ layout: base
 
 <link rel="stylesheet" href="/css/about.css"  type="text/css" />
 
-<div class="container"style="width:1000px">
+<div class="container" style="width:1000px">
 	<div class="infoContainer">
 		<h3>Education</h3>
 		<br>
 		<p><span class="title">School</span><span class="info">Tongji University, Shanghai, China</span></p>
 		<p><span class="title">Major</span><span class="info">Software Engineering</span></p>
 		<p><span class="title">Degree</span><span class="info">Bachelor</span></p>
-		<p><span class="title">Direction</span><span class="info">iOS and Web development</span></p>
-
+		<p><span class="title">Job</span><span class="info">iOS Engineer</span></p>
 		<hr>
 	</div>
-
-	<!-- var colors=["#1f77b4","#ff7f0e","#2ca02c","#d62728","#9467bd","#282828","#ee19f1"]; -->
-
 
 	<div class="infoContainer"  style="width:1000px">
 		<h3>Skills</h3>
@@ -74,7 +70,7 @@ layout: base
 			<span class="title">Like</span>
 			<span class="barContainer">
 				<div class="progress progress-striped active" style="margin-bottom:0">
-  					<div class="bar" style="width: 50%; background-color:#9467bd">
+  					<div class="bar" style="width: 30%; background-color:#9467bd">
 						<div class="info barInfo">PHP</div>
   					</div>
 				</div>
@@ -82,18 +78,7 @@ layout: base
 		</div>
 		<div style="clear:both"></div>
 
-		<div class="skillContainer">
-			<span class="title">Familiar</span>
-			<span class="barContainer">
-				<div class="progress progress-striped active" style="margin-bottom:0">
-  					<div class="bar" style="width: 30%; background-color:#282828">
-						<div class="info barInfo">Java</div>
-  					</div>
-				</div>
-			</span>
-		</div>
 		<div style="clear:both"></div>
-
 		<hr>
 	</div>
 
@@ -101,19 +86,22 @@ layout: base
 	<div class="infoContainer" style="width:1000px">
 		<h3>Experiences</h3>
 		<br>
-	
-		
-		
-
 		<div id="timeline">
 			<ul id="dates">
+				<li><a href="#time2016">2016</a></li>
         		<li><a href="#time2015">2015</a></li>
 				<li><a href="#time2014">2014</a></li>
 				<li><a href="#time2013">2013</a></li>
 				<li><a href="#time2012">2012</a></li>
 			</ul>
 			<ul id="issues">
-        
+        	
+				<li id="time2016">
+					<div>
+						<p><span class="title">Jan.</span><span class="info">Engineer at sui.me</span></p>
+					</div>
+				</li>
+
 				<li id="time2015">
 					<div>
 						<p><span class="title">Jan.</span><span class="info">Intern at liulishuo.com</span></p>
@@ -127,13 +115,12 @@ layout: base
 						<p><span class="title">Jan.</span><span class="info">Science and Technology Scholarship of Tongji University</span></p>
 						<p><span class="title">Feb.</span><span class="info">Volunteer of FTC</span></p>
 						<p><span class="title">Apr.</span><span class="info">Intern at eBay</span></p>
-						<p><span class="title">Sep.</span><span class="info">Intern at baixing.com</span></p>
 					</div>
 				</li>
 				
 				<li id="time2013">
 					<div>
-						<p><span class="title">Apr.</span><span class="info">Second Prize Of "Programming Contest" In Tongji University</span></p>
+						<p><span class="title">Apr.</span><span class="info">Second Prize Of "Programming Contest" in Tongji University</span></p>
 						<p><span class="title">May.</span><span class="info">Volunteer of "Challenge Cup"</span></p>
 						<p><span class="title">Sep.</span><span class="info">Assistant of "Java Language" Course</span></p>
 						<p><span class="title">Sep.</span><span class="info">Chairman of Tongji Football Association</span></p>
@@ -143,7 +130,7 @@ layout: base
 				</li>
 				<li id="time2012">
 					<div>
-						<p><span class="title">Apr.</span><span class="info">Second Prize of "Programming Contest" In Tongji University</span></p>
+						<p><span class="title">Apr.</span><span class="info">Second Prize of "Programming Contest" in Tongji University</span></p>
 						<p><span class="title">Sep.</span><span class="info">Assistant of "C Language" Course</span></p>
 						<p><span class="title">Nov.</span><span class="info">Volunteer of "Challenge Cup"</span></p>
 						<p><span class="title">Dec.</span><span class="info">Silver Prize of "IBM Master the Mainframe Contest China"</span></p>
@@ -152,8 +139,6 @@ layout: base
 			</ul>
 		</div>
 	</div>
-
-	
 </div>
 
 <script src="/js/jquery.timelinr-0.9.54.js"></script>

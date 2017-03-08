@@ -12,7 +12,11 @@ layout: base
 
 		<div class="leftContainer" style="float:left">
 			<div>
+				{% if page.category == "tvos_projects" %}
+				<img class="tvosIconImage" src="{{page.image}}">
+				{% else %}
 				<img class="iconImage" src="{{page.image}}">
+				{% endif %}
 			</div>
 			<br>
 			<div>
@@ -21,29 +25,25 @@ layout: base
 			<br>
 			<br>
 			<p>
-				<span class="projectItemTitle">{{page.cost}}</span><br>
-				<span class="projectItemTitle">类别</span>:<span class="projectItemInfo"> {{page.type}}</span><br>
-				<span class="projectItemTitle">{{page.publish}}</span>:<span class="projectItemInfo"> {{page.publishDate}}</span><br>
-				<span class="projectItemTitle">版本</span>:<span class="projectItemInfo"> {{page.version}}</span><br>
-				<span class="projectItemTitle">大小</span>:<span class="projectItemInfo"> {{page.size}}</span><br>
-				<span class="projectItemTitle">版权</span>:<span class="projectItemInfo">{{page.copyright}}</span><br>
-				<span class="projectItemTitle">兼容</span>:<span class="projectItemInfo"> {{page.require}}</span> <br>
+				<span class="projectItemCost">{{page.cost}}</span><br>
+				<span class="projectItemInfo">Category</span>:<span class="projectItemInfo"> {{page.type}}</span><br>
+				<span class="projectItemInfo">Released</span>:<span class="projectItemInfo"> {{page.released}}</span><br>
+				<span class="projectItemInfo">Version</span>:<span class="projectItemInfo"> {{page.version}}</span><br>
+				<span class="projectItemInfo">Size</span>:<span class="projectItemInfo"> {{page.size}}</span><br>
+				<span class="projectItemInfo">{{page.copyright}}</span>
+				<br>
+				<br>
+				<span class="projectItemTitle">Compatibility</span>:<span class="projectItemInfo"> {{page.require}}</span><br>
 			</p>
 		</div>
 		<div class="rightContainer" style="float:right">
-			<h3>内容提要</h3>
-			<div  id="projectContent">
-				{{content}}
-			</div>
-
-			<script>
-				$(document).ready(function(){
-					$("#projectContent").addClass('projectItemInfo');
-				});
-			</script>
+			<h3>Description</h3>
+			
+			{{content}}
+			
 			<br>
 
-			<h3>屏幕截图</h3>
+			<h3>Screenshots</h3>
 			<div id="screenShootContainer" style="overflow:scroll; white-space:nowrap">
 				<script>
 					var screenShoot={{page.screenShoot}};

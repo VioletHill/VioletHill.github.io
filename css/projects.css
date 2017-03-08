@@ -1,6 +1,6 @@
 
 .flowItem{
-
+	color: #515151;
 }
 
 .projectIcon{
@@ -10,13 +10,29 @@
 	border-radius: 20%;
 }
 
+.tvosProjectIcon{
+	width: 80%;
+	min-width: 50px;
+	max-width: 300px;
+	border-radius: 1%;
+}
+
+
+.projectItemCost{
+	font-size:13px;
+	color:#858989;
+	font-weight:bold;
+}
+
+
 .projectItemTitle{
 	font-size: 14px;
+	color:#858989;
 }
 
 .projectItemInfo{
 	font-size:13px;
-	color:#878787;
+	color:#858989;
 }
 
 .webTitle{
