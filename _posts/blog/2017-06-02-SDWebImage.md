@@ -11,31 +11,31 @@ description: SDWebImage(3.8.2) 源码解读
 
 ### **整体的关键步骤是这样的**：
 
-一、`UIImageView` 通过 `SDWebImage` 请求一个 URL 获取图片
+**一、** `UIImageView` 通过 `SDWebImage` 请求一个 URL 获取图片
 
-二、`SDWebImage` 根据这个 URL 先去 内存中寻找，如果找不到去硬盘中寻找（这里忽略一些 ignore cache 的 case）
+**二、** `SDWebImage` 根据这个 URL 先去 内存中寻找，如果找不到去硬盘中寻找（这里忽略一些 ignore cache 的 case）
 
-三、如果第二步再找不到，`SDWebImage` 会**先检查之前是否有这个 URL 正在下载**，之后创建一个 `NSMutableURLRequest: request`
+**三、** 如果第二步再找不到，`SDWebImage` 会**先检查之前是否有这个 URL 正在下载**，之后创建一个 `NSMutableURLRequest: request`
 
-四、将第三步的 `request` 封装成一个 `SDWebImageDownloaderOperation`(subclass of `NSOperation`) operation
+**四、** 将第三步的 `request` 封装成一个 `SDWebImageDownloaderOperation`(subclass of `NSOperation`) operation
 
-五、将第四步的 operation 根据 option 的配置，加入到队列中（提供先进先出以及先进后出两种）
+**五、** 将第四步的 operation 根据 option 的配置，加入到队列中（提供先进先出以及先进后出两种）
 
-六、operation 线程开始，开启 第三步 NSMutableURLRequest 的 request 配置的 NSURLSessionDataTask
+**六、** operation 线程开始，开启 第三步 NSMutableURLRequest 的 request 配置的 NSURLSessionDataTask
 
-七、第一个 NSURLSessionDataTaskDelegate 接收 response， 此时，配置好 expectedSize, 如果 responseCode 在 400 以下（除 304，304 是缓存 code），则开始接收 data；如果是 304，则不更新本地缓存，否则按照错误处理。
+**七、** 第一个 NSURLSessionDataTaskDelegate 接收 response， 此时，配置好 expectedSize, 如果 responseCode 在 400 以下（除 304，304 是缓存 code），则开始接收 data；如果是 304，则不更新本地缓存，否则按照错误处理。
 
-八、接收返回 data， 如果有 progressBlock 则根据 data 的百分比调用 progressBlock， 并且把每次接受的 data 加入到 `NSMutableData *imageData` 里面
+**八、** 接收返回 data， 如果有 progressBlock 则根据 data 的百分比调用 progressBlock， 并且把每次接受的 data 加入到 `NSMutableData *imageData` 里面
 
-九、接受完成后，判断是否有错误，如果有错误，返回错误；如果没有，则根据第八步的 `NSMutableData *imageData` 去组装成一个 `UIImage`, 根据是否组装成功，以及组装出来的 `UIImage` 是否 size 出现了 0，然后返回
+**九、** 接受完成后，判断是否有错误，如果有错误，返回错误；如果没有，则根据第八步的 `NSMutableData *imageData` 去组装成一个 `UIImage`, 根据是否组装成功，以及组装出来的 `UIImage` 是否 size 出现了 0，然后返回
 
-十、如果图片正常返回，开启内存缓存和磁盘缓存（这里都是可以根据 option 配置的）
+**十、** 如果图片正常返回，开启内存缓存和磁盘缓存（这里都是可以根据 option 配置的）
 
-十一、使用 `NSCache` 缓存，更具图片的 `width`、`height` 以及 `scale` 计算 `NSCache` 的 `cost`
+**十一、** 使用 `NSCache` 缓存，更具图片的 `width`、`height` 以及 `scale` 计算 `NSCache` 的 `cost`
 
-十二、根据 URL 的 MD5 值作为 key，在 `ioQueue`  线程中， 把图片写入到 `NSSearchPathForDirectoriesInDomains` 中
+**十二、** 根据 URL 的 MD5 值作为 key，在 `ioQueue`  线程中， 把图片写入到 `NSSearchPathForDirectoriesInDomains` 中
 
-十三、回主线程设置 `UIImageView`
+**十三、** 回主线程设置 `UIImageView`
 
 ---
 
