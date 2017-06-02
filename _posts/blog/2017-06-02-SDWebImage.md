@@ -239,6 +239,8 @@ id <SDWebImageOperation> subOperation = [self.imageDownloader downloadImageWithU
 ```
 去除一些错误代码之后，可以看到，当缓存在没有找到之后，此时，会向 `SDWebImageDownloader` 发起一个下载任务进入步骤三
 
+------------------------------
+
 **步骤三：创建 `NSMutableURLRequest`**
 
 ```
@@ -305,6 +307,8 @@ id <SDWebImageOperation> subOperation = [self.imageDownloader downloadImageWithU
 这个函数就是先**检查之前是否有这个 URL 正在下载**，`self.URLCallbacks` 是一个 `NSMutableDictionary`, 这里保存了正在下载的 URL, 在 [Kingfisher](https://github.com/onevcat/Kingfisher) 中，也有这样一段代码。
 紧接着，创建一个 `NSMutableURLRequest`， 配置好它的参数，进入步骤四
 
+------------------------------
+
 **步骤四：根据`NSMutableURLRequest`创建一个`NSOperation`**
 
 ```
@@ -362,6 +366,8 @@ id <SDWebImageOperation> subOperation = [self.imageDownloader downloadImageWithU
 
 步骤四的代码在 [Kingfisher](https://github.com/onevcat/Kingfisher) 的代码中并没有被体现，原因是 [Kingfisher](https://github.com/onevcat/Kingfisher)直接使用了 `NSURLSessionTask` 的优先级（iOS 8 API）
 
+------------------------------
+
 **步骤五：把 operation 加入到队列中**
 
 ```
@@ -384,6 +390,8 @@ id <SDWebImageOperation> subOperation = [self.imageDownloader downloadImageWithU
 ```
 
 `SDWebImage` 存在两种模式，先进先出和先进后出（后者是我在 issue 中似乎看到了有人需要这种需求），具体的实现方案是 `SDWebImage` 使用了一个队列，`downloadQueue` 以及 `lastAddedOperation` 记录上一个 operation, 如果是先进先出，则直接加入到 `downloadQueue`， 如果是先进后出，再加入到 `downloadQueue` 之后，还要让 `lastAddedOperation` dependency `operation`。总之，这里的代码很简单，看一看就明白了
+
+------------------------------
 
 **步骤六：配置 NSURLSessionDataTask，开启 operation**
 
@@ -471,6 +479,8 @@ id <SDWebImageOperation> subOperation = [self.imageDownloader downloadImageWithU
 单纯的组装代码，没啥好解释的。就是组装一个 `NSURLSessionDataTask`， 某些情况下，开启后台任务下载。
 然后等待回掉
 
+------------------------------
+
 **步骤七：接收第一次响应**
 
 ```
@@ -520,6 +530,7 @@ didReceiveResponse:(NSURLResponse *)response
 ```
 根据 http 的响应，判断是否是 正确的 code，如果是 [304 code](https://zh.wikipedia.org/wiki/HTTP_ETag)，特殊处理。并且把 `self.expectedSize` 计算好，用于 process 的计算
 
+------------------------------
 
 **步骤八：接收 data**
 
@@ -610,6 +621,8 @@ didReceiveResponse:(NSURLResponse *)response
 }
 ```
 这里做的就是 接收 data，然后组装成图片（至于为什么要在 data 没有完成接收就要组装我也不是很明白，作者贴的那个注视的 URL 也已经失效了）
+
+------------------------------
 
 **步骤九：接收 data 结束，解码 image**
 
@@ -748,6 +761,8 @@ didReceiveResponse:(NSURLResponse *)response
 
 ```
 这段代码大部分都是在错误处理，然后 `decoded` image，然后我都是直接跳过了。
+
+------------------------------
 
 **步骤十～十二：启内存缓存和磁盘缓存**
 
