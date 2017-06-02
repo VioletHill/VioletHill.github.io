@@ -74,32 +74,7 @@ description: SDWebImage(3.8.2) 源码解读
 
         __weak __typeof(self)wself = self;
         id <SDWebImageOperation> operation = [SDWebImageManager.sharedManager downloadImageWithURL:url options:options progress:progressBlock completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
-        /*
-            [wself removeActivityIndicator];
-            if (!wself) return;
-            dispatch_main_sync_safe(^{
-                if (!wself) return;
-                if (image && (options & SDWebImageAvoidAutoSetImage) && completedBlock)
-                {
-                    completedBlock(image, error, cacheType, url);
-                    return;
-                }
-                else if (image) {
-                    wself.image = image;
-                    [wself setNeedsLayout];
-                } else {
-                    if ((options & SDWebImageDelayPlaceholder)) {
-                        wself.image = placeholder;
-                        [wself setNeedsLayout];
-                    }
-                }
-                if (completedBlock && finished) {
-                    completedBlock(image, error, cacheType, url);
-                }
-            });
-        }];
-        [self sd_setImageLoadOperation:operation forKey:@"UIImageViewImageLoad"];
-        */
+        ...//省略零
     } else {
         dispatch_main_async_safe(^{
             [self removeActivityIndicator];
@@ -112,9 +87,9 @@ description: SDWebImage(3.8.2) 源码解读
 }
 ```
 
-上面注视的代码是上述关键步骤十三，也就是获得完图片之后，返回主线程去设置图片。
+上面"省略零"的代码是步骤十三，也就是获得完图片之后，返回主线程去设置图片。
 
-所以，剩余的代码特别简单。
+剩余的代码特别简单。
 
 1、取消了本身下载的图片，有兴趣可以去阅读一下 `sd_cancelCurrentImageLoad` 的代码，这里简单说一下，当一个 `UIView` (本例子中是 `UIImageView`), 发起一个 URL 请求， `SDWebImage` 会把这个 URL 通过 `objc_setAssociatedObject` 的方法绑定到这个 `UIView` 中。如果这个 `UIView` 再次发起一个新的请求，会把原先的 URL 请求给取消掉。想想 `UITableViewCell` 的复用场景就知道为什么要这么做了
 
