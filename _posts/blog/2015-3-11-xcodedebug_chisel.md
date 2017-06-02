@@ -24,17 +24,17 @@ brew install chisel</pre>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首先确认一下路径 正常情况下 你的路径应该和我的一样, 打开终端，输入
 <pre name="code" class="plain">cd /usr/local/opt/chisel/libexec/
 ls</pre>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首先确认一下路径你应该会看到这样的一堆文件，如果能够看到 说明你安装正确，并且路径和我的是一样的 如果不同  那么 你需要自己去寻找一下你的路径
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;你应该会看到这样的一堆文件，如果能够看到 说明你安装正确，并且路径和我的是一样的 如果不同  那么 你需要自己去寻找一下你的路径
     <pre>commands     fblldbobjcruntimehelpers.py
 fblldb.py     fblldbobjecthelpers.py
 fblldbbase.py     fblldbviewcontrollerhelpers.py
 fblldbinputhelpers.py   fblldbviewhelpers.py
     </pre>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首先确认一下路径接下来 在终端中输入：
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;接下来 在终端中输入：
     <pre>vim ~/.lldbinit</pre>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首先确认一下路径然后把这段代码复制进去，如果你的路径和我不同 那么 复制你自己对应的路径
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;然后把这段代码复制进去，如果你的路径和我不同 那么 复制你自己对应的路径
     <pre>command script import /usr/local/opt/chisel/libexec/fblldb.py</pre>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首先确认一下路径好了 所有的部署工作都完成了，最后 重启 Xcode，运行项目的时候，只要点击暂停 然后在 Console 中输入 pvc 就可以看到现在的 ViewController 啦 当然 你可以输入 help 查看更多的命令 或者 进入 <a href="https://github.com/facebook/chisel">GitHub</a>寻求更多的帮助。
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好了 所有的部署工作都完成了，最后 重启 Xcode，运行项目的时候，只要点击暂停 然后在 Console 中输入 pvc 就可以看到现在的 ViewController 啦 当然 你可以输入 help 查看更多的命令 或者 进入 <a href="https://github.com/facebook/chisel">GitHub </a>寻求更多的帮助。
   </p>
 </div>
 
