@@ -65,7 +65,9 @@ override func viewDidLoad() {
 
 ![](/images/blog/passwordautofill/passworddemo.jpeg)
 
-五、大功告成，调试运行
+五、大功告成，调试运行。可以看到和我一样，在 "QuickType" 区域，程序为你选择了对应的网站账号密码，只需要直接点击即可。
+
+![](/images/blog/passwordautofill/quickType.jpeg)
 
 ## 关于调试
 
