@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Objc 中 “== YES” 的愚蠢行为有多可怕
+title:  ObjC 中 “== YES” 的愚蠢行为有多可怕
 category: blog
 description: 看似无所谓，确隐藏了难以发现的 bug
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Demo 神器 Touchpose
+title: Demo 神器 Touchpose
 category: blog
 description: 在 Demo  演示中，把 FingerPoint 全部展现出来
 ---
@@ -47,6 +47,8 @@ import UIKit
 UIApplicationMain(CommandLine.argc, CommandLine.unsafeArgv, NSStringFromClass(QTouchposeApplication.self), NSStringFromClass(AppDelegate.self))
 
 ```
+
+以上代码为 `Swift 4` 语言，如果无法编译，Google 一下对应的语言变化，主要是 `CommandLine.argc, CommandLine.unsafeArgv` 这两个参数
 
 接着, 去你的 `AppDelegate.swift` 注释掉 `@UIApplicationMain`
 

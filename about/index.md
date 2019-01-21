@@ -88,6 +88,7 @@ layout: base
 		<br>
 		<div id="timeline">
 			<ul id="dates">
+            <li><a href="#time2017">2017</a></li>
 				<li><a href="#time2016">2016</a></li>
         		<li><a href="#time2015">2015</a></li>
 				<li><a href="#time2014">2014</a></li>
@@ -95,12 +96,27 @@ layout: base
 				<li><a href="#time2012">2012</a></li>
 			</ul>
 			<ul id="issues">
-        	
-				<li id="time2016">
-					<div>
-						<p><span class="title">Jan.</span><span class="info">Engineer at sui.me</span></p>
-					</div>
-				</li>
+        	        
+                    <li id="time2019">
+                    <div>
+                    <p><span class="title">Jan.</span><span class="info">Engineer at RingCentral.com</span></p>
+                    </div>
+                    </li>
+
+                    
+                    <li id="time2017">
+                    <div>
+                    <p><span class="title">Jan.</span><span class="info">Engineer at Tencent.com in QQ Team</span></p>
+                    </div>
+                    </li>
+    
+                    
+                <li id="time2016">
+                    <div>
+                    <p><span class="title">Jan.</span><span class="info">Engineer at sui.me</span></p>
+                    </div>
+                </li>
+                
 
 				<li id="time2015">
 					<div>
