@@ -28,6 +28,10 @@ $ git clone https://github.com/toddreed/Touchpose.git
 
 * 3. 创建 bridge 文件（如果已经有了，可以跳过），把 `QTouchposeApplication.h` 加入到 bridge 文件中
 
+```
+#import "QTouchposeApplication.h"
+```
+
 * 4. 接下来是大头，在 Swift 工程中，因为 main.m 文件的取消，需要我们手动创建。所以，新建一个 Swift 文件，将其命名为 `main.swift`，插入以下代码
 
     ![image](/images/blog/touchpose/swiftfile.png)
