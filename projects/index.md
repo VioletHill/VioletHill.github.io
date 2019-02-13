@@ -8,7 +8,7 @@ layout: base
 	<div class="container-fluid">
 		<div id="iosProject">
 			<h2>iOS</h2>
-			{% for project in site.categosries.ios_projects %}
+			{% for project in site.categories.ios_projects %}
 	         	 <div class="span4">
 	        		<a href="{{project.url}}"><h3>{{ project.title }}</h3></a>
 					<img src="{{project.image}}" class="projectIcon" />
