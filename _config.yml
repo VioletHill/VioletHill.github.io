@@ -1,5 +1,5 @@
 auto: true
-
+include: [".well-known"]
 markdown: kramdown
 pygments: true
 permalink: /:title
