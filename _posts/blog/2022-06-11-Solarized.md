@@ -1,11 +1,11 @@
 ---
 layout: post
-title: 全套配置 Solarized
+title: Solarized Theme
 category: blog
-description: Solarized是一种非常流行的配色方案
+description: Command Prompt theme
 ---
 
-* Xcode 
+### **Xcode:**
 
 1. Download Resource from [GitHub](https://github.com/brianmichel/solarized/tree/master/apple-xcode4-solarized)
     
@@ -15,7 +15,7 @@ description: Solarized是一种非常流行的配色方案
 
 4. relaunch Xcode
 
-* Terminal 
+### **Terminal:**
 
 1. Download Resource(Solarized.terminal) from [GitHub](https://github.com/altercation/solarized/tree/master/osx-terminal.app-colors-solarized)
 
@@ -25,7 +25,7 @@ description: Solarized是一种非常流行的配色方案
 
 4. relaunch Terminal 
 
-* Terminal Dir colors
+### **Terminal Dir colors:**
 
 ```
 cd /opt/git
@@ -36,7 +36,7 @@ eval `dircolors ~/.dircolors.256dark`
 EOF
 ```
 
-* Vim color
+### **Vim color:**
 
 1. Download Resource from [GitHub](https://github.com/altercation/solarized/tree/master/vim-colors-solarized/colors)
 
