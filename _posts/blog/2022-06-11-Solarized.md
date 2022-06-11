@@ -31,8 +31,10 @@ description: Command Prompt theme
 cd /opt/git
 git clone git@github.com:seebi/dircolors-solarized.git
 cp /opt/git/dircolors-solarized/dircolors.256dark ~/.dircolors.256dark
+brew install coreutils
 cat >> ~/.zshrc << EOF
-eval `dircolors ~/.dircolors.256dark`
+eval `gdircolors ~/.dircolors.256dark`
+alias ls='gls --color=auto'
 EOF
 ```
 
