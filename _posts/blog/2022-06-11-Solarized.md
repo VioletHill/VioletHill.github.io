@@ -44,6 +44,8 @@ EOF
 
 2. Copy Resource to `~/.vim/colors `
 
+`vim ~/.vimrc`
+
 ```
 syntax enable
 set background=dark
